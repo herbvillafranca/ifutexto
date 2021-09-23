@@ -1,4 +1,5 @@
 @prefix : <http://www.habingifugao.ph/ifutexto#> .
+@prefix ito: <http://www.habingifugao.ph/ifutexto#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -7,34 +8,34 @@
 @base <http://www.habingifugao.ph/ifutexto> .
 
 <http://www.habingifugao.ph/ifutexto> rdf:type owl:Ontology ;
-                                       owl:versionIRI <http://www.habingifugao.ph/ifutexto/0.0.3> .
+                                       owl:versionIRI <http://www.habingifugao.ph/ifutexto/0.0.4> .
 
 #################################################################
 #    Annotation properties
 #################################################################
 
 ###  http://www.habingifugao.ph/ifutexto#altName
-:altName rdf:type owl:AnnotationProperty ;
-         rdfs:domain owl:Thing .
+ito:altName rdf:type owl:AnnotationProperty ;
+            rdfs:domain owl:Thing .
 
 
 ###  http://www.habingifugao.ph/ifutexto#longDescription
-:longDescription rdf:type owl:AnnotationProperty ;
-                 rdfs:domain owl:Thing .
+ito:longDescription rdf:type owl:AnnotationProperty ;
+                    rdfs:domain owl:Thing .
 
 
 ###  http://www.habingifugao.ph/ifutexto#name
-:name rdf:type owl:AnnotationProperty ;
-      rdfs:domain owl:Thing .
+ito:name rdf:type owl:AnnotationProperty ;
+         rdfs:domain owl:Thing .
 
 
 ###  http://www.habingifugao.ph/ifutexto#reference
-:reference rdf:type owl:AnnotationProperty .
+ito:reference rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.habingifugao.ph/ifutexto#shortDescription
-:shortDescription rdf:type owl:AnnotationProperty ;
-                  rdfs:domain owl:Thing .
+ito:shortDescription rdf:type owl:AnnotationProperty ;
+                     rdfs:domain owl:Thing .
 
 
 #################################################################
@@ -42,168 +43,168 @@
 #################################################################
 
 ###  http://www.habingifugao.ph/ifutexto#hasColor
-:hasColor rdf:type owl:ObjectProperty ;
-          rdfs:domain :Textile ;
-          rdfs:range :Color .
+ito:hasColor rdf:type owl:ObjectProperty ;
+             rdfs:domain ito:Textile ;
+             rdfs:range ito:Color .
 
 
 ###  http://www.habingifugao.ph/ifutexto#hasDesign
-:hasDesign rdf:type owl:ObjectProperty ;
-           owl:inverseOf :isADesignSeenIn ;
-           rdfs:domain :Textile ;
-           rdfs:range :Design .
+ito:hasDesign rdf:type owl:ObjectProperty ;
+              owl:inverseOf ito:isADesignSeenIn ;
+              rdfs:domain ito:Textile ;
+              rdfs:range ito:Design .
 
 
 ###  http://www.habingifugao.ph/ifutexto#hasRegion
-:hasRegion rdf:type owl:ObjectProperty ;
-           rdfs:domain :Textile ;
-           rdfs:range :TextileRegion .
+ito:hasRegion rdf:type owl:ObjectProperty ;
+              rdfs:domain ito:Textile ;
+              rdfs:range ito:TextileRegion .
 
 
 ###  http://www.habingifugao.ph/ifutexto#hasSubdesign
-:hasSubdesign rdf:type owl:ObjectProperty ,
-                       owl:TransitiveProperty ;
-              rdfs:domain :Design ;
-              rdfs:range :Design .
+ito:hasSubdesign rdf:type owl:ObjectProperty ,
+                          owl:TransitiveProperty ;
+                 rdfs:domain ito:Design ;
+                 rdfs:range ito:Design .
 
 
 ###  http://www.habingifugao.ph/ifutexto#hasSubregion
-:hasSubregion rdf:type owl:ObjectProperty ,
-                       owl:TransitiveProperty ;
-              rdfs:domain :TextileRegion ;
-              rdfs:range :TextileRegion .
+ito:hasSubregion rdf:type owl:ObjectProperty ,
+                          owl:TransitiveProperty ;
+                 rdfs:domain ito:TextileRegion ;
+                 rdfs:range ito:TextileRegion .
 
 
 ###  http://www.habingifugao.ph/ifutexto#hasTechnique
-:hasTechnique rdf:type owl:ObjectProperty ;
-              rdfs:domain :Textile ;
-              rdfs:range :Technique .
+ito:hasTechnique rdf:type owl:ObjectProperty ;
+                 rdfs:domain ito:Textile ;
+                 rdfs:range ito:Technique .
 
 
 ###  http://www.habingifugao.ph/ifutexto#isADesignInTextilesUsedBy
-:isADesignInTextilesUsedBy rdf:type owl:ObjectProperty ;
-                           rdfs:domain :Design ;
-                           rdfs:range :User .
+ito:isADesignInTextilesUsedBy rdf:type owl:ObjectProperty ;
+                              rdfs:domain ito:Design ;
+                              rdfs:range ito:User .
 
 
 ###  http://www.habingifugao.ph/ifutexto#isADesignInTextilesUsedIn
-:isADesignInTextilesUsedIn rdf:type owl:ObjectProperty ;
-                           rdfs:domain :Design ;
-                           rdfs:range :Usage .
+ito:isADesignInTextilesUsedIn rdf:type owl:ObjectProperty ;
+                              rdfs:domain ito:Design ;
+                              rdfs:range ito:Usage .
 
 
 ###  http://www.habingifugao.ph/ifutexto#isADesignMadeWithTechnique
-:isADesignMadeWithTechnique rdf:type owl:ObjectProperty ;
-                            owl:inverseOf :isATechniqueThatFeaturesDesign ;
-                            rdfs:domain :Design ;
-                            rdfs:range :Technique .
+ito:isADesignMadeWithTechnique rdf:type owl:ObjectProperty ;
+                               owl:inverseOf ito:isATechniqueThatFeaturesDesign ;
+                               rdfs:domain ito:Design ;
+                               rdfs:range ito:Technique .
 
 
 ###  http://www.habingifugao.ph/ifutexto#isADesignSeenIn
-:isADesignSeenIn rdf:type owl:ObjectProperty ;
-                 rdfs:domain :Design ;
-                 rdfs:range :Textile .
+ito:isADesignSeenIn rdf:type owl:ObjectProperty ;
+                    rdfs:domain ito:Design ;
+                    rdfs:range ito:Textile .
 
 
 ###  http://www.habingifugao.ph/ifutexto#isADesignThatAppearsWithDesign
-:isADesignThatAppearsWithDesign rdf:type owl:ObjectProperty ,
-                                         owl:SymmetricProperty ,
-                                         owl:TransitiveProperty ;
-                                rdfs:domain :Design ;
-                                rdfs:range :Design .
+ito:isADesignThatAppearsWithDesign rdf:type owl:ObjectProperty ,
+                                            owl:SymmetricProperty ,
+                                            owl:TransitiveProperty ;
+                                   rdfs:domain ito:Design ;
+                                   rdfs:range ito:Design .
 
 
 ###  http://www.habingifugao.ph/ifutexto#isADesignWithColor
-:isADesignWithColor rdf:type owl:ObjectProperty ;
-                    rdfs:domain :Design ;
-                    rdfs:range :Color .
+ito:isADesignWithColor rdf:type owl:ObjectProperty ;
+                       rdfs:domain ito:Design ;
+                       rdfs:range ito:Color .
 
 
 ###  http://www.habingifugao.ph/ifutexto#isARegionThatHasTechnique
-:isARegionThatHasTechnique rdf:type owl:ObjectProperty ,
-                                    owl:FunctionalProperty ;
-                           rdfs:domain :TextileRegion ;
-                           rdfs:range :Technique .
+ito:isARegionThatHasTechnique rdf:type owl:ObjectProperty ,
+                                       owl:FunctionalProperty ;
+                              rdfs:domain ito:TextileRegion ;
+                              rdfs:range ito:Technique .
 
 
 ###  http://www.habingifugao.ph/ifutexto#isATechniqueInTextilesForUsage
-:isATechniqueInTextilesForUsage rdf:type owl:ObjectProperty ;
-                                rdfs:domain :Technique ;
-                                rdfs:range :Usage .
+ito:isATechniqueInTextilesForUsage rdf:type owl:ObjectProperty ;
+                                   rdfs:domain ito:Technique ;
+                                   rdfs:range ito:Usage .
 
 
 ###  http://www.habingifugao.ph/ifutexto#isATechniqueThatFeaturesDesign
-:isATechniqueThatFeaturesDesign rdf:type owl:ObjectProperty ;
-                                rdfs:domain :Technique ;
-                                rdfs:range :Design .
+ito:isATechniqueThatFeaturesDesign rdf:type owl:ObjectProperty ;
+                                   rdfs:domain ito:Technique ;
+                                   rdfs:range ito:Design .
 
 
 ###  http://www.habingifugao.ph/ifutexto#isATechniqueThatUsesColor
-:isATechniqueThatUsesColor rdf:type owl:ObjectProperty ;
-                           rdfs:domain :Technique ;
-                           rdfs:range :Color .
+ito:isATechniqueThatUsesColor rdf:type owl:ObjectProperty ;
+                              rdfs:domain ito:Technique ;
+                              rdfs:range ito:Color .
 
 
 ###  http://www.habingifugao.ph/ifutexto#isAlsoUsedAs
-:isAlsoUsedAs rdf:type owl:ObjectProperty ,
-                       owl:SymmetricProperty ,
-                       owl:TransitiveProperty ;
-              rdfs:domain :Textile ;
-              rdfs:range :Textile ;
-              :longDescription "When a textile is also used as another textile type (e.g. a blanket as shroud)"@en .
+ito:isAlsoUsedAs rdf:type owl:ObjectProperty ,
+                          owl:SymmetricProperty ,
+                          owl:TransitiveProperty ;
+                 rdfs:domain ito:Textile ;
+                 rdfs:range ito:Textile ;
+                 ito:longDescription "When a textile is also used as another textile type (e.g. a blanket as shroud)"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#isDerivedFrom
-:isDerivedFrom rdf:type owl:ObjectProperty ,
-                        owl:TransitiveProperty ;
-               rdfs:domain :Textile ;
-               rdfs:range :Textile ;
-               :longDescription "A textile that is made up of one or more pieces of another textile type."@en .
+ito:isDerivedFrom rdf:type owl:ObjectProperty ,
+                           owl:TransitiveProperty ;
+                  rdfs:domain ito:Textile ;
+                  rdfs:range ito:Textile ;
+                  ito:longDescription "A textile that is made up of one or more pieces of another textile type."@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#isDyedWith
-:isDyedWith rdf:type owl:ObjectProperty ;
-            rdfs:domain :Textile ;
-            rdfs:range :Dye .
+ito:isDyedWith rdf:type owl:ObjectProperty ;
+               rdfs:domain ito:Textile ;
+               rdfs:range ito:Dye .
 
 
 ###  http://www.habingifugao.ph/ifutexto#isMadeWithFiber
-:isMadeWithFiber rdf:type owl:ObjectProperty ;
-                 rdfs:domain :Textile ;
-                 rdfs:range :Fiber .
+ito:isMadeWithFiber rdf:type owl:ObjectProperty ;
+                    rdfs:domain ito:Textile ;
+                    rdfs:range ito:Fiber .
 
 
 ###  http://www.habingifugao.ph/ifutexto#isMadeWithLoom
-:isMadeWithLoom rdf:type owl:ObjectProperty ;
-                rdfs:domain :Textile ;
-                rdfs:range :Loom .
+ito:isMadeWithLoom rdf:type owl:ObjectProperty ;
+                   rdfs:domain ito:Textile ;
+                   rdfs:range ito:Loom .
 
 
 ###  http://www.habingifugao.ph/ifutexto#isUsedBy
-:isUsedBy rdf:type owl:ObjectProperty ;
-          rdfs:domain :Textile ;
-          rdfs:range :User .
+ito:isUsedBy rdf:type owl:ObjectProperty ;
+             rdfs:domain ito:Textile ;
+             rdfs:range ito:User .
 
 
 ###  http://www.habingifugao.ph/ifutexto#isUsedByCommunity
-:isUsedByCommunity rdf:type owl:ObjectProperty ;
-                   rdfs:domain :Textile ;
-                   rdfs:range :Community .
+ito:isUsedByCommunity rdf:type owl:ObjectProperty ;
+                      rdfs:domain ito:Textile ;
+                      rdfs:range ito:Community .
 
 
 ###  http://www.habingifugao.ph/ifutexto#isUsedDuring
-:isUsedDuring rdf:type owl:ObjectProperty ;
-              rdfs:domain :Textile ;
-              rdfs:range :Usage .
+ito:isUsedDuring rdf:type owl:ObjectProperty ;
+                 rdfs:domain ito:Textile ;
+                 rdfs:range ito:Usage .
 
 
 ###  http://www.habingifugao.ph/ifutexto#isUsedWithTextile
-:isUsedWithTextile rdf:type owl:ObjectProperty ,
-                            owl:SymmetricProperty ,
-                            owl:TransitiveProperty ;
-                   rdfs:domain :Textile ;
-                   rdfs:range :Textile ;
-                   :longDescription "When two textiles are used together/simultaneously"@en .
+ito:isUsedWithTextile rdf:type owl:ObjectProperty ,
+                               owl:SymmetricProperty ,
+                               owl:TransitiveProperty ;
+                      rdfs:domain ito:Textile ;
+                      rdfs:range ito:Textile ;
+                      ito:longDescription "When two textiles are used together/simultaneously"@en .
 
 
 #################################################################
@@ -211,1034 +212,1034 @@
 #################################################################
 
 ###  http://www.habingifugao.ph/ifutexto#AgeGroup
-:AgeGroup rdf:type owl:Class ;
-          rdfs:subClassOf :User ;
-          :name "Age Group"@en .
+ito:AgeGroup rdf:type owl:Class ;
+             rdfs:subClassOf ito:User ;
+             ito:name "Age Group"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Allot
-:Allot rdf:type owl:Class ;
-       rdfs:subClassOf :Belt ;
-       :longDescription "a kind of belt used in Ifugao"@en ;
-       :name "Allot"@ifk ;
-       rdfs:comment "Seen in Martin 2018"@en .
+ito:Allot rdf:type owl:Class ;
+          rdfs:subClassOf ito:Belt ;
+          ito:longDescription "a kind of belt used in Ifugao"@en ;
+          ito:name "Allot"@ifk ;
+          rdfs:comment "Seen in Martin 2018"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Ambayung
-:Ambayung rdf:type owl:Class ;
-          rdfs:subClassOf :HipBag ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty :hasColor ;
-                            owl:hasValue :Black
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty :hasDesign ;
-                            owl:hasValue :Hinulgi
-                          ] ;
-          :altName "Ambayong"@ifk ;
-          :longDescription "A type of butong, smaller than a pinu'hha; woven in black yarn and has narrower stripes. The hinulgi stripe is a dominant motif."@en ;
-          :name "Ambayung"@ifk ;
-          :shortDescription "Male Hip Bag"@en .
+ito:Ambayung rdf:type owl:Class ;
+             rdfs:subClassOf ito:HipBag ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty ito:hasColor ;
+                               owl:hasValue ito:Black
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty ito:hasDesign ;
+                               owl:hasValue ito:Hinulgi
+                             ] ;
+             ito:altName "Ambayong"@ifk ;
+             ito:longDescription "A type of butong, smaller than a pinu'hha; woven in black yarn and has narrower stripes. The hinulgi stripe is a dominant motif."@en ;
+             ito:name "Ambayung"@ifk ;
+             ito:shortDescription "Male Hip Bag"@en .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Ambayung ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Ambayung ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "A type of butong, smaller than a pinu'hha; woven in black yarn and has narrower stripes. The hinulgi stripe is a dominant motif."@en ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#AnimalDesign
-:AnimalDesign rdf:type owl:Class ;
-              rdfs:subClassOf :Design ;
-              :name "Animal"@en ;
-              rdfs:comment "a Design subclass that features animal designs, motifs, and patterns"@en .
+ito:AnimalDesign rdf:type owl:Class ;
+                 rdfs:subClassOf ito:Design ;
+                 ito:name "Animal"@en ;
+                 rdfs:comment "a Design subclass that features animal designs, motifs, and patterns"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Bag
-:Bag rdf:type owl:Class ;
-     rdfs:subClassOf :Textile ;
-     owl:disjointWith [ rdf:type owl:Class ;
-                        owl:unionOf ( :Belt
-                                      :Blanket
-                                      :Headdress
-                                      :Loincloth
-                                      :Skirt
-                                      :UpperGarment
-                                    )
-                      ] ;
-     :name "Bag"@en .
+ito:Bag rdf:type owl:Class ;
+        rdfs:subClassOf ito:Textile ;
+        owl:disjointWith [ rdf:type owl:Class ;
+                           owl:unionOf ( ito:Belt
+                                         ito:Blanket
+                                         ito:Headdress
+                                         ito:Loincloth
+                                         ito:Skirt
+                                         ito:UpperGarment
+                                       )
+                         ] ;
+        ito:name "Bag"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Balko
-:Balko rdf:type owl:Class ;
-       rdfs:subClassOf :Belt ;
-       :longDescription "a generic term for a woman's belt"@en ;
-       :name "Balko"@ifk .
+ito:Balko rdf:type owl:Class ;
+          rdfs:subClassOf ito:Belt ;
+          ito:longDescription "a generic term for a woman's belt"@en ;
+          ito:name "Balko"@ifk .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Balko ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Balko ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "a generic term for a woman's belt"@en ;
-   :reference "Lambrecht 1958"
+   ito:reference "Lambrecht 1958"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Bayyaung
-:Bayyaung rdf:type owl:Class ;
-          rdfs:subClassOf :Blanket ,
-                          :Headdress ,
-                          :Shroud ;
-          :altName "Bayaong"@ifk ,
-                   "Bayyaong"@ifk ,
-                   "Chili"@ifk ;
-          :longDescription "The bayaung has become the standard Ifugao blanket at present. Men of all ages regardless of social status wear this red and black blanket during social events requiring the use of traditional attires. Among earlier generations however, the bayaung was exclusive to elder members of the upper class and to ritualists who officiate the baki rituals."@en ;
-          :name "Bayyaung"@ifk ;
-          rdfs:comment "Chili​ also known as ​baya-ong​, a high-class shroud is used by the Lagawe folk accompanied with a ​hape​, a decorative attire placed across the body."@en ,
-                       "When used as a funerary garment (gagaom), the bayaung serves as a pongot or a headdress and not as a blanket as the gamongs already serve this purpose."@en ,
-                       "[Bayaong blankets] serve as an upper garment, occasionally as a turban, mostly for older people, on festival days such as marriage feasts."@en .
+ito:Bayyaung rdf:type owl:Class ;
+             rdfs:subClassOf ito:Blanket ,
+                             ito:Headdress ,
+                             ito:Shroud ;
+             ito:altName "Bayaong"@ifk ,
+                         "Bayyaong"@ifk ,
+                         "Chili"@ifk ;
+             ito:longDescription "The bayaung has become the standard Ifugao blanket at present. Men of all ages regardless of social status wear this red and black blanket during social events requiring the use of traditional attires. Among earlier generations however, the bayaung was exclusive to elder members of the upper class and to ritualists who officiate the baki rituals."@en ;
+             ito:name "Bayyaung"@ifk ;
+             rdfs:comment "Chili​ also known as ​baya-ong​, a high-class shroud is used by the Lagawe folk accompanied with a ​hape​, a decorative attire placed across the body."@en ,
+                          "When used as a funerary garment (gagaom), the bayaung serves as a pongot or a headdress and not as a blanket as the gamongs already serve this purpose."@en ,
+                          "[Bayaong blankets] serve as an upper garment, occasionally as a turban, mostly for older people, on festival days such as marriage feasts."@en .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Bayyaung ;
-   owl:annotatedProperty :altName ;
+   owl:annotatedSource ito:Bayyaung ;
+   owl:annotatedProperty ito:altName ;
    owl:annotatedTarget "Chili"@ifk ;
    rdfs:comment "Celino 1990"
  ] .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Bayyaung ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Bayyaung ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "The bayaung has become the standard Ifugao blanket at present. Men of all ages regardless of social status wear this red and black blanket during social events requiring the use of traditional attires. Among earlier generations however, the bayaung was exclusive to elder members of the upper class and to ritualists who officiate the baki rituals."@en ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Bayyaung ;
+   owl:annotatedSource ito:Bayyaung ;
    owl:annotatedProperty rdfs:comment ;
    owl:annotatedTarget "[Bayaong blankets] serve as an upper garment, occasionally as a turban, mostly for older people, on festival days such as marriage feasts."@en ;
-   :reference "Lambrecht 1958"
+   ito:reference "Lambrecht 1958"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Belt
-:Belt rdf:type owl:Class ;
-      rdfs:subClassOf :Textile ;
-      :longDescription "a TEXTILE TYPE SUBCLASS listing different kinds of belts"@en ;
-      :name "Belt"@en .
+ito:Belt rdf:type owl:Class ;
+         rdfs:subClassOf ito:Textile ;
+         ito:longDescription "a TEXTILE TYPE SUBCLASS listing different kinds of belts"@en ;
+         ito:name "Belt"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Binayyaung
-:Binayyaung rdf:type owl:Class ;
-            rdfs:subClassOf :Skirt ;
-            :longDescription "An Ifugao skirt. The Binayyaung is but two pieces of the bayaong blanket made into a skirt."@en ;
-            :name "Binayyaung"@ifk .
+ito:Binayyaung rdf:type owl:Class ;
+               rdfs:subClassOf ito:Skirt ;
+               ito:longDescription "An Ifugao skirt. The Binayyaung is but two pieces of the bayaong blanket made into a skirt."@en ;
+               ito:name "Binayyaung"@ifk .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Binayyaung ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Binayyaung ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "An Ifugao skirt. The Binayyaung is but two pieces of the bayaong blanket made into a skirt."@en ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Binuhlan
-:Binuhlan rdf:type owl:Class ;
-          rdfs:subClassOf :Loincloth ;
-          :altName "Wanno"@ifk ;
-          :longDescription "an Ifugao loincloth that is generally made of dark-blue (almost black) cloth, with a red stripe running lengthwise in the middle, between two yellow, or occasionally red, lines, which either touch the middle stripe immediately, or are woven at some distance from it" ;
-          :name "Binuhlan"@ifk .
+ito:Binuhlan rdf:type owl:Class ;
+             rdfs:subClassOf ito:Loincloth ;
+             ito:altName "Wanno"@ifk ;
+             ito:longDescription "an Ifugao loincloth that is generally made of dark-blue (almost black) cloth, with a red stripe running lengthwise in the middle, between two yellow, or occasionally red, lines, which either touch the middle stripe immediately, or are woven at some distance from it" ;
+             ito:name "Binuhlan"@ifk .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Binuhlan ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Binuhlan ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "an Ifugao loincloth that is generally made of dark-blue (almost black) cloth, with a red stripe running lengthwise in the middle, between two yellow, or occasionally red, lines, which either touch the middle stripe immediately, or are woven at some distance from it" ;
-   :reference "Vanoverbergh 1929"
+   ito:reference "Vanoverbergh 1929"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Blanket
-:Blanket rdf:type owl:Class ;
-         rdfs:subClassOf :Textile ;
-         :name "Blanket"@en ;
-         rdfs:comment "a TEXTILE TYPE SUBCLASS for different Ifugao blankets"@en .
+ito:Blanket rdf:type owl:Class ;
+            rdfs:subClassOf ito:Textile ;
+            ito:name "Blanket"@en ;
+            rdfs:comment "a TEXTILE TYPE SUBCLASS for different Ifugao blankets"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#BlanketPanel
-:BlanketPanel rdf:type owl:Class ;
-              rdfs:subClassOf :TextileRegion ;
-              :name "Blanket Panel"@en ;
-              rdfs:comment "a TEXTILE REGION SUBCLASS containing subpanels of Ifugao blankets"@en .
+ito:BlanketPanel rdf:type owl:Class ;
+                 rdfs:subClassOf ito:TextileRegion ;
+                 ito:name "Blanket Panel"@en ;
+                 rdfs:comment "a TEXTILE REGION SUBCLASS containing subpanels of Ifugao blankets"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#CelestialDesign
-:CelestialDesign rdf:type owl:Class ;
-                 rdfs:subClassOf :Design ;
-                 :name "Celestial"@en ;
-                 rdfs:comment "a Design subclass that features designs, motifs, and patterns related to objects seen in the sky"@en .
+ito:CelestialDesign rdf:type owl:Class ;
+                    rdfs:subClassOf ito:Design ;
+                    ito:name "Celestial"@en ;
+                    rdfs:comment "a Design subclass that features designs, motifs, and patterns related to objects seen in the sky"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#CeremonialUsage
-:CeremonialUsage rdf:type owl:Class ;
-                 rdfs:subClassOf :Usage ;
-                 owl:disjointWith :EverydayUsage ;
-                 :name "Ceremonial"@en ;
-                 rdfs:comment "a USAGE SUBCLASS listing ceremonies and traditions where certain textiles are used"@en .
+ito:CeremonialUsage rdf:type owl:Class ;
+                    rdfs:subClassOf ito:Usage ;
+                    owl:disjointWith ito:EverydayUsage ;
+                    ito:name "Ceremonial"@en ;
+                    rdfs:comment "a USAGE SUBCLASS listing ceremonies and traditions where certain textiles are used"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Color
-:Color rdf:type owl:Class ;
-       :name "Color"@en ;
-       rdfs:comment "a TOP CLASS containing different colors associated with Ifugao weaving"@en .
+ito:Color rdf:type owl:Class ;
+          ito:name "Color"@en ;
+          rdfs:comment "a TOP CLASS containing different colors associated with Ifugao weaving"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Community
-:Community rdf:type owl:Class ;
-           :name "Community"@en ;
-           rdfs:comment "a TOP CLASS listing Ifugao weaving communities"@en .
+ito:Community rdf:type owl:Class ;
+              ito:name "Community"@en ;
+              rdfs:comment "a TOP CLASS listing Ifugao weaving communities"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#DecorativeDyeing
-:DecorativeDyeing rdf:type owl:Class ;
-                  rdfs:subClassOf :Technique ;
-                  :name "Decorative Dyeing"@en .
+ito:DecorativeDyeing rdf:type owl:Class ;
+                     rdfs:subClassOf ito:Technique ;
+                     ito:name "Decorative Dyeing"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#DecorativeWeaving
-:DecorativeWeaving rdf:type owl:Class ;
-                   rdfs:subClassOf :Technique ;
-                   :name "Decorative Weaving"@en .
+ito:DecorativeWeaving rdf:type owl:Class ;
+                      rdfs:subClassOf ito:Technique ;
+                      ito:name "Decorative Weaving"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#DeityDesign
-:DeityDesign rdf:type owl:Class ;
-             rdfs:subClassOf :Design ;
-             :name "Deity"@en ;
-             rdfs:comment "a Design subclass that features designs, motifs, and patterns related to gods and deities"@en .
+ito:DeityDesign rdf:type owl:Class ;
+                rdfs:subClassOf ito:Design ;
+                ito:name "Deity"@en ;
+                rdfs:comment "a Design subclass that features designs, motifs, and patterns related to gods and deities"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Design
-:Design rdf:type owl:Class ;
-        :name "Design"@en ;
-        rdfs:comment "a TOP CLASS for different designs appearing in Ifugao textiles" .
+ito:Design rdf:type owl:Class ;
+           ito:name "Design"@en ;
+           rdfs:comment "a TOP CLASS for different designs appearing in Ifugao textiles" .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Dye
-:Dye rdf:type owl:Class ;
-     rdfs:subClassOf :Material ;
-     owl:disjointWith :Fiber ;
-     :longDescription "A liquid containing a color-producing compound capable of being chemically bonded to fibers."@en ;
-     :name "Dye"@en ;
-     rdfs:comment "a MATERIAL SUBCLASS listing dyes used to color textiles"@en .
+ito:Dye rdf:type owl:Class ;
+        rdfs:subClassOf ito:Material ;
+        owl:disjointWith ito:Fiber ;
+        ito:longDescription "A liquid containing a color-producing compound capable of being chemically bonded to fibers."@en ;
+        ito:name "Dye"@en ;
+        rdfs:comment "a MATERIAL SUBCLASS listing dyes used to color textiles"@en .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Dye ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Dye ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "A liquid containing a color-producing compound capable of being chemically bonded to fibers."@en ;
-   :reference "George Washington University Museum"
+   ito:reference "George Washington University Museum"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#EverydayUsage
-:EverydayUsage rdf:type owl:Class ;
-               rdfs:subClassOf :Usage ;
-               :name "Everyday"@en ;
-               rdfs:comment "a USAGE SUBCLASS listing general days when certain textiles are used"@en .
+ito:EverydayUsage rdf:type owl:Class ;
+                  rdfs:subClassOf ito:Usage ;
+                  ito:name "Everyday"@en ;
+                  rdfs:comment "a USAGE SUBCLASS listing general days when certain textiles are used"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Fiber
-:Fiber rdf:type owl:Class ;
-       rdfs:subClassOf :Material ;
-       :longDescription "A long and narrow hair-like component of plant or animal tissue, and by extension the smallest linear component (natural or manufactured), used to create a yarn or textile. Usable textile fibers can be extracted from the stems or leaves of many plants, some wild and other domesticated."@en ;
-       :name "Fiber"@en ;
-       rdfs:comment "a MATERIAL SUBCLASS listing different types of fibers"@en .
+ito:Fiber rdf:type owl:Class ;
+          rdfs:subClassOf ito:Material ;
+          ito:longDescription "A long and narrow hair-like component of plant or animal tissue, and by extension the smallest linear component (natural or manufactured), used to create a yarn or textile. Usable textile fibers can be extracted from the stems or leaves of many plants, some wild and other domesticated."@en ;
+          ito:name "Fiber"@en ;
+          rdfs:comment "a MATERIAL SUBCLASS listing different types of fibers"@en .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Fiber ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Fiber ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "A long and narrow hair-like component of plant or animal tissue, and by extension the smallest linear component (natural or manufactured), used to create a yarn or textile. Usable textile fibers can be extracted from the stems or leaves of many plants, some wild and other domesticated."@en ;
-   :reference "George Washington University Museum"
+   ito:reference "George Washington University Museum"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Gammit
-:Gammit rdf:type owl:Class ;
-        rdfs:subClassOf :Skirt ;
-        :longDescription "An Ifugao Skirt. The gammit is the most ornate of all the Ifugao skirts having all the symbolisms used in other traditional textiles."@en ;
-        :name "Gammit"@ifk .
+ito:Gammit rdf:type owl:Class ;
+           rdfs:subClassOf ito:Skirt ;
+           ito:longDescription "An Ifugao Skirt. The gammit is the most ornate of all the Ifugao skirts having all the symbolisms used in other traditional textiles."@en ;
+           ito:name "Gammit"@ifk .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Gammit ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Gammit ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "An Ifugao Skirt. The gammit is the most ornate of all the Ifugao skirts having all the symbolisms used in other traditional textiles."@en ;
-   :reference "Lambrecht 1958" ,
-              "Martin 2018"
+   ito:reference "Lambrecht 1958" ,
+                 "Martin 2018"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#GammitAnBinobodan
-:GammitAnBinobodan rdf:type owl:Class ;
-                   rdfs:subClassOf :Gammit ;
-                   owl:disjointWith :GammitAnNilihha ;
-                   :longDescription "An Ifugao Skirt. Binobodan/ikat version of the Gammit."@en ;
-                   :name "Gammit An Binobodan"@ifk .
+ito:GammitAnBinobodan rdf:type owl:Class ;
+                      rdfs:subClassOf ito:Gammit ;
+                      owl:disjointWith ito:GammitAnNilihha ;
+                      ito:longDescription "An Ifugao Skirt. Binobodan/ikat version of the Gammit."@en ;
+                      ito:name "Gammit An Binobodan"@ifk .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :GammitAnBinobodan ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:GammitAnBinobodan ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "An Ifugao Skirt. Binobodan/ikat version of the Gammit."@en ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#GammitAnNilihha
-:GammitAnNilihha rdf:type owl:Class ;
-                 rdfs:subClassOf :Gammit ;
-                 :longDescription "An Ifugao Skirt. Nilihha (supplementary warp) version of the Gammit."@en ;
-                 :name "Gammit An Nilihha"@ifk .
+ito:GammitAnNilihha rdf:type owl:Class ;
+                    rdfs:subClassOf ito:Gammit ;
+                    ito:longDescription "An Ifugao Skirt. Nilihha (supplementary warp) version of the Gammit."@en ;
+                    ito:name "Gammit An Nilihha"@ifk .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :GammitAnNilihha ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:GammitAnNilihha ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "An Ifugao Skirt. Nilihha (supplementary warp) version of the Gammit."@en ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Gamong
-:Gamong rdf:type owl:Class ;
-        rdfs:subClassOf :Blanket ;
-        :longDescription "An Ifugao blanket specifically used for the dead."@en ;
-        :name "Gamong"@ifk ;
-        rdfs:comment "It is not used as a garment, serves as the outer layer of two or more death cloths; uses ikat patterned fabric"@en .
+ito:Gamong rdf:type owl:Class ;
+           rdfs:subClassOf ito:Blanket ;
+           ito:longDescription "An Ifugao blanket specifically used for the dead."@en ;
+           ito:name "Gamong"@ifk ;
+           rdfs:comment "It is not used as a garment, serves as the outer layer of two or more death cloths; uses ikat patterned fabric"@en .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Gamong ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Gamong ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "An Ifugao blanket specifically used for the dead."@en ;
-   :reference "Lambrecht 1958"
+   ito:reference "Lambrecht 1958"
  ] .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Gamong ;
+   owl:annotatedSource ito:Gamong ;
    owl:annotatedProperty rdfs:comment ;
    owl:annotatedTarget "It is not used as a garment, serves as the outer layer of two or more death cloths; uses ikat patterned fabric"@en ;
-   :reference "Lambrecht 1958"
+   ito:reference "Lambrecht 1958"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Gender
-:Gender rdf:type owl:Class ;
-        rdfs:subClassOf :User ;
-        :name "Gender"@en .
+ito:Gender rdf:type owl:Class ;
+           rdfs:subClassOf ito:User ;
+           ito:name "Gender"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Gimpong
-:Gimpong rdf:type owl:Class ;
-         rdfs:subClassOf :Loincloth ;
-         :longDescription "an Ifugao loincloth. Perhaps the most ornate of the binuhlans, the gimpong combines the elements of the Pini’wa and the regular binuhlan."@en ;
-         :name "Gimpong"@ifk .
+ito:Gimpong rdf:type owl:Class ;
+            rdfs:subClassOf ito:Loincloth ;
+            ito:longDescription "an Ifugao loincloth. Perhaps the most ornate of the binuhlans, the gimpong combines the elements of the Pini’wa and the regular binuhlan."@en ;
+            ito:name "Gimpong"@ifk .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Gimpong ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Gimpong ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "an Ifugao loincloth. Perhaps the most ornate of the binuhlans, the gimpong combines the elements of the Pini’wa and the regular binuhlan."@en ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Ginallit
-:Ginallit rdf:type owl:Class ;
-          rdfs:subClassOf :Skirt ;
-          :altName "Binnalit"@ifk ,
-                   "Intinlu"@ifk ,
-                   "Pfinalet"@ifk ;
-          :longDescription "An all-around Ifugao striped skirt. It features a series of parallel black (or dark blue) and white stripes, and alternating black and white takdog stitches."@en ;
-          :name "Ginallit"@ifk ;
-          rdfs:comment "Presently, the takdog is sewn with alternating black and red threads instead of the more traditional black and white. The selvedges of the skirt are decorated by the kutilap stitch, triangular embroideries of red and black thread alternating every two inches. The skirt’s cut edges are hemmed then embroidered with the hambulud in red and yellow threads, again alternating in colors every 5 cm."@en .
+ito:Ginallit rdf:type owl:Class ;
+             rdfs:subClassOf ito:Skirt ;
+             ito:altName "Binnalit"@ifk ,
+                         "Intinlu"@ifk ,
+                         "Pfinalet"@ifk ;
+             ito:longDescription "An all-around Ifugao striped skirt. It features a series of parallel black (or dark blue) and white stripes, and alternating black and white takdog stitches."@en ;
+             ito:name "Ginallit"@ifk ;
+             rdfs:comment "Presently, the takdog is sewn with alternating black and red threads instead of the more traditional black and white. The selvedges of the skirt are decorated by the kutilap stitch, triangular embroideries of red and black thread alternating every two inches. The skirt’s cut edges are hemmed then embroidered with the hambulud in red and yellow threads, again alternating in colors every 5 cm."@en .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Ginallit ;
-   owl:annotatedProperty :altName ;
+   owl:annotatedSource ito:Ginallit ;
+   owl:annotatedProperty ito:altName ;
    owl:annotatedTarget "Binnalit"@ifk ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Ginallit ;
-   owl:annotatedProperty :altName ;
+   owl:annotatedSource ito:Ginallit ;
+   owl:annotatedProperty ito:altName ;
    owl:annotatedTarget "Intinlu"@ifk ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Ginallit ;
-   owl:annotatedProperty :altName ;
+   owl:annotatedSource ito:Ginallit ;
+   owl:annotatedProperty ito:altName ;
    owl:annotatedTarget "Pfinalet"@ifk ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Ginallit ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Ginallit ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "An all-around Ifugao striped skirt. It features a series of parallel black (or dark blue) and white stripes, and alternating black and white takdog stitches."@en ;
    rdfs:comment "Martin 2018"
  ] .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Ginallit ;
+   owl:annotatedSource ito:Ginallit ;
    owl:annotatedProperty rdfs:comment ;
    owl:annotatedTarget "Presently, the takdog is sewn with alternating black and red threads instead of the more traditional black and white. The selvedges of the skirt are decorated by the kutilap stitch, triangular embroideries of red and black thread alternating every two inches. The skirt’s cut edges are hemmed then embroidered with the hambulud in red and yellow threads, again alternating in colors every 5 cm."@en ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#HandBag
-:HandBag rdf:type owl:Class ;
-         rdfs:subClassOf :Bag ;
-         owl:disjointWith :HipBag ;
-         :name "Hand Bag"@en .
+ito:HandBag rdf:type owl:Class ;
+            rdfs:subClassOf ito:Bag ;
+            owl:disjointWith ito:HipBag ;
+            ito:name "Hand Bag"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Hape
-:Hape rdf:type owl:Class ;
-      rdfs:subClassOf :Blanket ;
-      :longDescription "An Ifugao funerary blanket similar in function to the bayyaung but more frequently used by women and unmarried men; a decorative attire worn over clothes. Characteized as being dark blue with white stripes."@en ;
-      :name "Hape"@ifk ;
-      rdfs:comment "...younger shamans wear usually a ​ha’pe​ ​blanket [while they perform their rites]"@en ,
-                   "In former times, it was also considered a blanket for the upper class though currently thought of today as that for the poor. Like the gamong and baya’ung blankets, a separate strip called the talungtung is used as a border with white and red fringes alternating every 5 cm. Present-day weavers are more liberal in the use of colors for the fringes sometimes adding yellow to the traditional red and white."@en ,
-                   "The baya’ung (and the ha’pe) were originally also used as turban for men."@en .
+ito:Hape rdf:type owl:Class ;
+         rdfs:subClassOf ito:Blanket ;
+         ito:longDescription "An Ifugao funerary blanket similar in function to the bayyaung but more frequently used by women and unmarried men; a decorative attire worn over clothes. Characteized as being dark blue with white stripes."@en ;
+         ito:name "Hape"@ifk ;
+         rdfs:comment "...younger shamans wear usually a ​ha’pe​ ​blanket [while they perform their rites]"@en ,
+                      "In former times, it was also considered a blanket for the upper class though currently thought of today as that for the poor. Like the gamong and baya’ung blankets, a separate strip called the talungtung is used as a border with white and red fringes alternating every 5 cm. Present-day weavers are more liberal in the use of colors for the fringes sometimes adding yellow to the traditional red and white."@en ,
+                      "The baya’ung (and the ha’pe) were originally also used as turban for men."@en .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Hape ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Hape ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "An Ifugao funerary blanket similar in function to the bayyaung but more frequently used by women and unmarried men; a decorative attire worn over clothes. Characteized as being dark blue with white stripes."@en ;
-   :reference "Martin 2018" ,
-              "Vanoverbergh 1929"
+   ito:reference "Martin 2018" ,
+                 "Vanoverbergh 1929"
  ] .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Hape ;
+   owl:annotatedSource ito:Hape ;
    owl:annotatedProperty rdfs:comment ;
    owl:annotatedTarget "...younger shamans wear usually a ​ha’pe​ ​blanket [while they perform their rites]"@en ;
-   :reference "Lambrecht 1958"
+   ito:reference "Lambrecht 1958"
  ] .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Hape ;
+   owl:annotatedSource ito:Hape ;
    owl:annotatedProperty rdfs:comment ;
    owl:annotatedTarget "In former times, it was also considered a blanket for the upper class though currently thought of today as that for the poor. Like the gamong and baya’ung blankets, a separate strip called the talungtung is used as a border with white and red fringes alternating every 5 cm. Present-day weavers are more liberal in the use of colors for the fringes sometimes adding yellow to the traditional red and white."@en ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Hape ;
+   owl:annotatedSource ito:Hape ;
    owl:annotatedProperty rdfs:comment ;
    owl:annotatedTarget "The baya’ung (and the ha’pe) were originally also used as turban for men."@en ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Hayda
-:Hayda rdf:type owl:Class ;
-       rdfs:subClassOf :Blanket ;
-       :longDescription "An ornamented Ifugao blanket that has here and there a blue stripe flanked on both sides by alternating red and yellow ones. Predominantly white."@en ;
-       :name "Hayda"@ifk .
+ito:Hayda rdf:type owl:Class ;
+          rdfs:subClassOf ito:Blanket ;
+          ito:longDescription "An ornamented Ifugao blanket that has here and there a blue stripe flanked on both sides by alternating red and yellow ones. Predominantly white."@en ;
+          ito:name "Hayda"@ifk .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Hayda ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Hayda ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "An ornamented Ifugao blanket that has here and there a blue stripe flanked on both sides by alternating red and yellow ones. Predominantly white."@en ;
-   :reference "Vanoverbergh 1929"
+   ito:reference "Vanoverbergh 1929"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Headdress
-:Headdress rdf:type owl:Class ;
-           rdfs:subClassOf :Textile ;
-           :name "Headdress"@en ;
-           rdfs:comment "a TEXTILE TYPE SUBCLASS for different Ifugao headdresses"@en .
+ito:Headdress rdf:type owl:Class ;
+              rdfs:subClassOf ito:Textile ;
+              ito:name "Headdress"@en ;
+              rdfs:comment "a TEXTILE TYPE SUBCLASS for different Ifugao headdresses"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#HipBag
-:HipBag rdf:type owl:Class ;
-        rdfs:subClassOf :Bag ;
-        :name "Hip Bag"@en .
+ito:HipBag rdf:type owl:Class ;
+           rdfs:subClassOf ito:Bag ;
+           ito:name "Hip Bag"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#HumanDesign
-:HumanDesign rdf:type owl:Class ;
-             rdfs:subClassOf :Design ;
-             :name "Human"@en ;
-             rdfs:comment "a Design subclass that features people-related designs, motifs, and patterns"@en .
+ito:HumanDesign rdf:type owl:Class ;
+                rdfs:subClassOf ito:Design ;
+                ito:name "Human"@en ;
+                rdfs:comment "a Design subclass that features people-related designs, motifs, and patterns"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Indinwa
-:Indinwa rdf:type owl:Class ;
-         rdfs:subClassOf :Skirt ;
-         :longDescription "An Ifugao skirt. The Indinwa is a shorter version of the ginallit/intinlu and is used as a working skirt. It usually does not feature the hambulud."@en ;
-         :name "Indinwa"@ifk .
+ito:Indinwa rdf:type owl:Class ;
+            rdfs:subClassOf ito:Skirt ;
+            ito:longDescription "An Ifugao skirt. The Indinwa is a shorter version of the ginallit/intinlu and is used as a working skirt. It usually does not feature the hambulud."@en ;
+            ito:name "Indinwa"@ifk .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Indinwa ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Indinwa ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "An Ifugao skirt. The Indinwa is a shorter version of the ginallit/intinlu and is used as a working skirt. It usually does not feature the hambulud."@en ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Inggalgaletget
-:Inggalgaletget rdf:type owl:Class ;
-                rdfs:subClassOf :Skirt ;
-                :altName "Ginalletget"@ifk ;
-                :longDescription "An Ifugao skirt full or narrow stripes used for by women working on rice paddies. It is presently out of fashion."@en ;
-                :name "Inggalgaletget"@ifk .
+ito:Inggalgaletget rdf:type owl:Class ;
+                   rdfs:subClassOf ito:Skirt ;
+                   ito:altName "Ginalletget"@ifk ;
+                   ito:longDescription "An Ifugao skirt full or narrow stripes used for by women working on rice paddies. It is presently out of fashion."@en ;
+                   ito:name "Inggalgaletget"@ifk .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Inggalgaletget ;
-   owl:annotatedProperty :altName ;
+   owl:annotatedSource ito:Inggalgaletget ;
+   owl:annotatedProperty ito:altName ;
    owl:annotatedTarget "Ginalletget"@ifk ;
    rdfs:comment "Martin 2018"
  ] .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Inggalgaletget ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Inggalgaletget ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "An Ifugao skirt full or narrow stripes used for by women working on rice paddies. It is presently out of fashion."@en ;
-   :reference "Lambrecht 2018"
+   ito:reference "Lambrecht 2018"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Inlahdang
-:Inlahdang rdf:type owl:Class ;
-           rdfs:subClassOf :Blanket ;
-           :altName "Inladang"@en ;
-           :longDescription "An Ifugao blanket. The inla’dang blanket resembles the gammit skirt in terms of patterns used in its designing. It is specifically a blanket for the kadangyan."@en ;
-           :name "Inlahdang"@ifk ;
-           rdfs:comment "It is made of three pieces, one adolna and two balingbing plus two small talungtung or border pieces. Its value is estimated to be higher than the gamong and bayaong blankets."@en .
+ito:Inlahdang rdf:type owl:Class ;
+              rdfs:subClassOf ito:Blanket ;
+              ito:altName "Inladang"@en ;
+              ito:longDescription "An Ifugao blanket. The inla’dang blanket resembles the gammit skirt in terms of patterns used in its designing. It is specifically a blanket for the kadangyan."@en ;
+              ito:name "Inlahdang"@ifk ;
+              rdfs:comment "It is made of three pieces, one adolna and two balingbing plus two small talungtung or border pieces. Its value is estimated to be higher than the gamong and bayaong blankets."@en .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Inlahdang ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Inlahdang ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "An Ifugao blanket. The inla’dang blanket resembles the gammit skirt in terms of patterns used in its designing. It is specifically a blanket for the kadangyan."@en ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Inlahdang ;
+   owl:annotatedSource ito:Inlahdang ;
    owl:annotatedProperty rdfs:comment ;
    owl:annotatedTarget "It is made of three pieces, one adolna and two balingbing plus two small talungtung or border pieces. Its value is estimated to be higher than the gamong and bayaong blankets."@en ;
-   :reference "Lambrecht 1958"
+   ito:reference "Lambrecht 1958"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Kindiman
-:Kindiman rdf:type owl:Class ;
-          rdfs:subClassOf :Belt ;
-          :longDescription "a kind of belt used in Ifugao"@en ;
-          :name "Kindiman"@ifk ;
-          rdfs:comment "Seen in Martin 2018"@en .
+ito:Kindiman rdf:type owl:Class ;
+             rdfs:subClassOf ito:Belt ;
+             ito:longDescription "a kind of belt used in Ifugao"@en ;
+             ito:name "Kindiman"@ifk ;
+             rdfs:comment "Seen in Martin 2018"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Kintog
-:Kintog rdf:type owl:Class ;
-        rdfs:subClassOf :Blanket ;
-        :altName "Oban"@ifk ;
-        :longDescription "An Ifugao blanket for the lower class and normally used as a baby sling in which case it is called an oban. Sans the talungtung or border strip, it is the hápe in reverse colors, i.e. pre-dominantly white with black stripes."@en ;
-        :name "Kintog"@ifk .
+ito:Kintog rdf:type owl:Class ;
+           rdfs:subClassOf ito:Blanket ;
+           ito:altName "Oban"@ifk ;
+           ito:longDescription "An Ifugao blanket for the lower class and normally used as a baby sling in which case it is called an oban. Sans the talungtung or border strip, it is the hápe in reverse colors, i.e. pre-dominantly white with black stripes."@en ;
+           ito:name "Kintog"@ifk .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Kintog ;
-   owl:annotatedProperty :altName ;
+   owl:annotatedSource ito:Kintog ;
+   owl:annotatedProperty ito:altName ;
    owl:annotatedTarget "Oban"@ifk ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Kintog ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Kintog ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "An Ifugao blanket for the lower class and normally used as a baby sling in which case it is called an oban. Sans the talungtung or border strip, it is the hápe in reverse colors, i.e. pre-dominantly white with black stripes."@en ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Kinutiyyan
-:Kinutiyyan rdf:type owl:Class ;
-            rdfs:subClassOf :Blanket ,
-                            :Headdress ,
-                            :Shroud ;
-            :altName "Kinutian"@en ;
-            :longDescription "A prestigious Ifugao blanket made using the binobodan/ikat technique. It is also used as a shroud and as men's headgear."@en ;
-            :name "Kinutiyyan"@ifk .
+ito:Kinutiyyan rdf:type owl:Class ;
+               rdfs:subClassOf ito:Blanket ,
+                               ito:Headdress ,
+                               ito:Shroud ;
+               ito:altName "Kinutian"@en ;
+               ito:longDescription "A prestigious Ifugao blanket made using the binobodan/ikat technique. It is also used as a shroud and as men's headgear."@en ;
+               ito:name "Kinutiyyan"@ifk .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Kinutiyyan ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Kinutiyyan ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "A prestigious Ifugao blanket made using the binobodan/ikat technique. It is also used as a shroud and as men's headgear."@en ;
-   :reference "Martin 2018" ,
-              "Salvador-Amores 2018"
+   ito:reference "Martin 2018" ,
+                 "Salvador-Amores 2018"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Kupiling
-:Kupiling rdf:type owl:Class ;
-          rdfs:subClassOf :Tinonwe ;
-          owl:disjointWith :Tagaktak ;
-          :longDescription "An Ifugao loincloth. A variant of the tinonwe; usually 5-6 inches in width. The Kupiling is often preferred over the Tagaktak."@en ;
-          :name "Kupiling"@ifk .
+ito:Kupiling rdf:type owl:Class ;
+             rdfs:subClassOf ito:Tinonwe ;
+             owl:disjointWith ito:Tagaktak ;
+             ito:longDescription "An Ifugao loincloth. A variant of the tinonwe; usually 5-6 inches in width. The Kupiling is often preferred over the Tagaktak."@en ;
+             ito:name "Kupiling"@ifk .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Kupiling ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Kupiling ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "An Ifugao loincloth. A variant of the tinonwe; usually 5-6 inches in width. The Kupiling is often preferred over the Tagaktak."@en ;
-   :reference "Lambrecht 1958"
+   ito:reference "Lambrecht 1958"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Lamma
-:Lamma rdf:type owl:Class ;
-       rdfs:subClassOf :UpperGarment ;
-       :longDescription "An Ifugao upper garment. A type of women's working-cloth used in weeding and harvest times."@en ;
-       :name "Lamma"@ifk .
+ito:Lamma rdf:type owl:Class ;
+          rdfs:subClassOf ito:UpperGarment ;
+          ito:longDescription "An Ifugao upper garment. A type of women's working-cloth used in weeding and harvest times."@en ;
+          ito:name "Lamma"@ifk .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Lamma ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Lamma ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "An Ifugao upper garment. A type of women's working-cloth used in weeding and harvest times."@en ;
-   :reference "Lambrecht 1958"
+   ito:reference "Lambrecht 1958"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Libutan
-:Libutan rdf:type owl:Class ;
-         rdfs:subClassOf :HandBag ;
-         :longDescription "a type of hand bag used by Ifugao women"@en ;
-         :name "Libutan"@ifk .
+ito:Libutan rdf:type owl:Class ;
+            rdfs:subClassOf ito:HandBag ;
+            ito:longDescription "a type of hand bag used by Ifugao women"@en ;
+            ito:name "Libutan"@ifk .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Libutan ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Libutan ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "a type of hand bag used by Ifugao women"@en ;
-   :reference "Lambrecht 1958"@en
+   ito:reference "Lambrecht 1958"@en
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Llabhu
-:Llabhu rdf:type owl:Class ;
-        rdfs:subClassOf :Blanket ;
-        :longDescription "An Ifugao funerary blanket used by middle-class members of the community. It has blue and white stripes."@en ;
-        :name "Llabhu"@ifk .
+ito:Llabhu rdf:type owl:Class ;
+           rdfs:subClassOf ito:Blanket ;
+           ito:longDescription "An Ifugao funerary blanket used by middle-class members of the community. It has blue and white stripes."@en ;
+           ito:name "Llabhu"@ifk .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Llabhu ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Llabhu ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "An Ifugao funerary blanket used by middle-class members of the community. It has blue and white stripes."@en ;
-   :reference "Celino 1990"
+   ito:reference "Celino 1990"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Loincloth
-:Loincloth rdf:type owl:Class ;
-           rdfs:subClassOf :Textile ;
-           :name "Loincloth"@en .
+ito:Loincloth rdf:type owl:Class ;
+              rdfs:subClassOf ito:Textile ;
+              ito:name "Loincloth"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#LoinclothRegion
-:LoinclothRegion rdf:type owl:Class ;
-                 rdfs:subClassOf :TextileRegion ;
-                 :name "Loincloth Region"@en ;
-                 rdfs:comment "a TEXTILE REGION SUBCLASS containing subpanels of Ifugao loincloths"@en .
+ito:LoinclothRegion rdf:type owl:Class ;
+                    rdfs:subClassOf ito:TextileRegion ;
+                    ito:name "Loincloth Region"@en ;
+                    rdfs:comment "a TEXTILE REGION SUBCLASS containing subpanels of Ifugao loincloths"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Loom
-:Loom rdf:type owl:Class ;
-      :longDescription "A device for weaving, containing a means of lifting selected warp yarns above other warp yarns, forming a space called a shed through which the weft is passed."@en ;
-      :name "Loom"@en ;
-      rdfs:comment "a TOP CLASS listing types of looms used for weaving"@en .
+ito:Loom rdf:type owl:Class ;
+         ito:longDescription "A device for weaving, containing a means of lifting selected warp yarns above other warp yarns, forming a space called a shed through which the weft is passed."@en ;
+         ito:name "Loom"@en ;
+         rdfs:comment "a TOP CLASS listing types of looms used for weaving"@en .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Loom ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Loom ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "A device for weaving, containing a means of lifting selected warp yarns above other warp yarns, forming a space called a shed through which the weft is passed."@en ;
-   :reference "George Washington University Museum"
+   ito:reference "George Washington University Museum"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Material
-:Material rdf:type owl:Class ;
-          :name "Material"@en ;
-          rdfs:comment "a TOP CLASS listing materials used for weaving such as dyes and fibers"@en .
+ito:Material rdf:type owl:Class ;
+             ito:name "Material"@en ;
+             rdfs:comment "a TOP CLASS listing materials used for weaving such as dyes and fibers"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Mayad
-:Mayad rdf:type owl:Class ;
-       rdfs:subClassOf :Belt ,
-                       :Loincloth ;
-       :longDescription "The Mayad is the belt proper particularly for ceremonial skirts like the gammit. It is designed with the hinolme, a complex design with the tinaggu, binittuwon and giniggiling patterns."@en ,
-                        "The full-length mayad serves both as belt proper for women and a loincloth for men. It comes in two design patterns, one using the binittuwon (star-like) and the hinalhalibubu (azola-like). The use of the mayad as a loincloth is limited to the kadangyan. When used as a belt, it is paired with the gammit or binayyaung, not with the binnalit or intinlu."@en ;
-       :name "Mayad"@ifk .
+ito:Mayad rdf:type owl:Class ;
+          rdfs:subClassOf ito:Belt ,
+                          ito:Loincloth ;
+          ito:longDescription "The Mayad is the belt proper particularly for ceremonial skirts like the gammit. It is designed with the hinolme, a complex design with the tinaggu, binittuwon and giniggiling patterns."@en ,
+                              "The full-length mayad serves both as belt proper for women and a loincloth for men. It comes in two design patterns, one using the binittuwon (star-like) and the hinalhalibubu (azola-like). The use of the mayad as a loincloth is limited to the kadangyan. When used as a belt, it is paired with the gammit or binayyaung, not with the binnalit or intinlu."@en ;
+          ito:name "Mayad"@ifk .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Mayad ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Mayad ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "The Mayad is the belt proper particularly for ceremonial skirts like the gammit. It is designed with the hinolme, a complex design with the tinaggu, binittuwon and giniggiling patterns."@en ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Mayad ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Mayad ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "The full-length mayad serves both as belt proper for women and a loincloth for men. It comes in two design patterns, one using the binittuwon (star-like) and the hinalhalibubu (azola-like). The use of the mayad as a loincloth is limited to the kadangyan. When used as a belt, it is paired with the gammit or binayyaung, not with the binnalit or intinlu."@en ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#ObjectDesign
-:ObjectDesign rdf:type owl:Class ;
-              rdfs:subClassOf :Design ;
-              :name "Object"@en ;
-              rdfs:comment "a Design subclass that features objects and other various items"@en .
+ito:ObjectDesign rdf:type owl:Class ;
+                 rdfs:subClassOf ito:Design ;
+                 ito:name "Object"@en ;
+                 rdfs:comment "a Design subclass that features objects and other various items"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Pinagawaan
-:Pinagawaan rdf:type owl:Class ;
-            rdfs:subClassOf :Skirt ;
-            :longDescription "An Ifugao skirt. A variant of the Binayyaung traditionally worn in Banaue and Hapao in Hungduan"@en ;
-            :name "Pinagawaan"@ifk .
+ito:Pinagawaan rdf:type owl:Class ;
+               rdfs:subClassOf ito:Skirt ;
+               ito:longDescription "An Ifugao skirt. A variant of the Binayyaung traditionally worn in Banaue and Hapao in Hungduan"@en ;
+               ito:name "Pinagawaan"@ifk .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Pinagawaan ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Pinagawaan ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "An Ifugao skirt. A variant of the Binayyaung traditionally worn in Banaue and Hapao in Hungduan"@en ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Pinagpagan
-:Pinagpagan rdf:type owl:Class ;
-            rdfs:subClassOf :Blanket ,
-                            :Shroud ;
-            :altName "Dilli"@ifk ;
-            :longDescription "An Ifugao blanket. Although the pinagpagan is mostly used for burial purposes, it is also used as a ceremonial blanket for kadangyan mumbagols, mumbaki of high ceremonies. Elderly kadangyans are also entitled to wear the pinagpagan in lieu of the bayyaung."@en ;
-            :name "Pinagpagan"@ifk ;
-            rdfs:comment "The pinagpagan when used as a burial shroud is reserved only for the “manuwangan”, kadangyans and their descendants whose funeral includes at least a carabao as part of the sacrificial animals or dangli."@en ,
-                         """The “pagpag” design of the pinagpagan is composed of the binongogan and the hinulgi patterns. This pair of pagpag patterns woven in odd numbers from 5 up to 15 (in the Kiangan area) is what is counted by the elders when determining the proper blanket for a deceased Ifugao kadangyan. The number of pagpags originally indicated the number of days of a kadangyan’s funeral. The term pagpag conveys the idea of what has been repeatedly beaten with a stick particularly the huklit or the finishing gape rod.
+ito:Pinagpagan rdf:type owl:Class ;
+               rdfs:subClassOf ito:Blanket ,
+                               ito:Shroud ;
+               ito:altName "Dilli"@ifk ;
+               ito:longDescription "An Ifugao blanket. Although the pinagpagan is mostly used for burial purposes, it is also used as a ceremonial blanket for kadangyan mumbagols, mumbaki of high ceremonies. Elderly kadangyans are also entitled to wear the pinagpagan in lieu of the bayyaung."@en ;
+               ito:name "Pinagpagan"@ifk ;
+               rdfs:comment "The pinagpagan when used as a burial shroud is reserved only for the “manuwangan”, kadangyans and their descendants whose funeral includes at least a carabao as part of the sacrificial animals or dangli."@en ,
+                            """The “pagpag” design of the pinagpagan is composed of the binongogan and the hinulgi patterns. This pair of pagpag patterns woven in odd numbers from 5 up to 15 (in the Kiangan area) is what is counted by the elders when determining the proper blanket for a deceased Ifugao kadangyan. The number of pagpags originally indicated the number of days of a kadangyan’s funeral. The term pagpag conveys the idea of what has been repeatedly beaten with a stick particularly the huklit or the finishing gape rod.
 
 A red diamond design, pinnit (wild raspberry), is embroidered in the different levels of the pagpag specifically overlaid in the hinulgi pattern. The pinnit signifies that at least a carabao will form part of the dangli or sacrificial animals during the funeral. The pinagpagan when used as a burial shroud is reserved only for the “manuwangan”, kadangyans and their descendants whose funeral includes at least a carabao as part of the sacrificial animals or dangli."""@en .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Pinagpagan ;
-   owl:annotatedProperty :altName ;
+   owl:annotatedSource ito:Pinagpagan ;
+   owl:annotatedProperty ito:altName ;
    owl:annotatedTarget "Dilli"@ifk ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Pinagpagan ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Pinagpagan ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "An Ifugao blanket. Although the pinagpagan is mostly used for burial purposes, it is also used as a ceremonial blanket for kadangyan mumbagols, mumbaki of high ceremonies. Elderly kadangyans are also entitled to wear the pinagpagan in lieu of the bayyaung."@en ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Pinagpagan ;
+   owl:annotatedSource ito:Pinagpagan ;
    owl:annotatedProperty rdfs:comment ;
    owl:annotatedTarget "The pinagpagan when used as a burial shroud is reserved only for the “manuwangan”, kadangyans and their descendants whose funeral includes at least a carabao as part of the sacrificial animals or dangli."@en ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Pinagpagan ;
+   owl:annotatedSource ito:Pinagpagan ;
    owl:annotatedProperty rdfs:comment ;
    owl:annotatedTarget """The “pagpag” design of the pinagpagan is composed of the binongogan and the hinulgi patterns. This pair of pagpag patterns woven in odd numbers from 5 up to 15 (in the Kiangan area) is what is counted by the elders when determining the proper blanket for a deceased Ifugao kadangyan. The number of pagpags originally indicated the number of days of a kadangyan’s funeral. The term pagpag conveys the idea of what has been repeatedly beaten with a stick particularly the huklit or the finishing gape rod.
 
 A red diamond design, pinnit (wild raspberry), is embroidered in the different levels of the pagpag specifically overlaid in the hinulgi pattern. The pinnit signifies that at least a carabao will form part of the dangli or sacrificial animals during the funeral. The pinagpagan when used as a burial shroud is reserved only for the “manuwangan”, kadangyans and their descendants whose funeral includes at least a carabao as part of the sacrificial animals or dangli."""@en ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Piniwa
-:Piniwa rdf:type owl:Class ;
-        rdfs:subClassOf :Loincloth ;
-        :longDescription "an Ifugao loincloth"@en ;
-        :name "Piniwa"@ifk .
+ito:Piniwa rdf:type owl:Class ;
+           rdfs:subClassOf ito:Loincloth ;
+           ito:longDescription "an Ifugao loincloth"@en ;
+           ito:name "Piniwa"@ifk .
 
 
 ###  http://www.habingifugao.ph/ifutexto#PiniwaAnNabobodan
-:PiniwaAnNabobodan rdf:type owl:Class ;
-                   rdfs:subClassOf :Piniwa ;
-                   owl:disjointWith :PiniwaAnNilihha ;
-                   :longDescription "An Ifugao loincloth. It is similar to the PiniwaAnLinihha, except that the designs are obtained using the binobodan technique."@en ;
-                   :name "Piniwa An Nabobodan"@ifk .
+ito:PiniwaAnNabobodan rdf:type owl:Class ;
+                      rdfs:subClassOf ito:Piniwa ;
+                      owl:disjointWith ito:PiniwaAnNilihha ;
+                      ito:longDescription "An Ifugao loincloth. It is similar to the PiniwaAnLinihha, except that the designs are obtained using the binobodan technique."@en ;
+                      ito:name "Piniwa An Nabobodan"@ifk .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :PiniwaAnNabobodan ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:PiniwaAnNabobodan ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "An Ifugao loincloth. It is similar to the PiniwaAnLinihha, except that the designs are obtained using the binobodan technique."@en ;
-   :reference "Lambrecht 1958"
+   ito:reference "Lambrecht 1958"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#PiniwaAnNilihha
-:PiniwaAnNilihha rdf:type owl:Class ;
-                 rdfs:subClassOf :Piniwa ;
-                 :longDescription "An Ifugao loincloth. The ​piniwa an nilihha​ is but a richer form of the binhulan​ geestring, because it has in its ​dayude​ and iwitan​ a design stripe of the same kind as the design stripe of the ​bali’ngbing​ of the b​ayaong ​blanket. Woven using the nilihha technique."@en ;
-                 :name "Piniwa An Nilihha"@ifk .
+ito:PiniwaAnNilihha rdf:type owl:Class ;
+                    rdfs:subClassOf ito:Piniwa ;
+                    ito:longDescription "An Ifugao loincloth. The ​piniwa an nilihha​ is but a richer form of the binhulan​ geestring, because it has in its ​dayude​ and iwitan​ a design stripe of the same kind as the design stripe of the ​bali’ngbing​ of the b​ayaong ​blanket. Woven using the nilihha technique."@en ;
+                    ito:name "Piniwa An Nilihha"@ifk .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :PiniwaAnNilihha ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:PiniwaAnNilihha ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "An Ifugao loincloth. The ​piniwa an nilihha​ is but a richer form of the binhulan​ geestring, because it has in its ​dayude​ and iwitan​ a design stripe of the same kind as the design stripe of the ​bali’ngbing​ of the b​ayaong ​blanket. Woven using the nilihha technique."@en ;
-   :reference "Lambrecht 1958"
+   ito:reference "Lambrecht 1958"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Pinogpogan
-:Pinogpogan rdf:type owl:Class ;
-            rdfs:subClassOf :Blanket ;
-            :longDescription "An Ifugao funerary blanket used by middle-class members of the community. It is predominantly red-striped."@en ;
-            :name "Pinogpogan"@ifk .
+ito:Pinogpogan rdf:type owl:Class ;
+               rdfs:subClassOf ito:Blanket ;
+               ito:longDescription "An Ifugao funerary blanket used by middle-class members of the community. It is predominantly red-striped."@en ;
+               ito:name "Pinogpogan"@ifk .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Pinogpogan ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Pinogpogan ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "An Ifugao funerary blanket used by middle-class members of the community. It is predominantly red-striped."@en ;
-   :reference "Celino 1990"
+   ito:reference "Celino 1990"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Pinuhha
-:Pinuhha rdf:type owl:Class ;
-         rdfs:subClassOf :HipBag ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty :isUsedBy ;
-                           owl:hasValue :Male
-                         ] ;
-         :altName "Butong"@ifk ,
-                  "Pinubba"@ifk ;
-         :longDescription "The male hip bag contains the man’s personal effects from betel chew ingredients to his amulets (hiwang/kodla). Brass coils and a stringed bottom makes this peculiarly Ifugao."@en ;
-         :shortDescription "Male Hip Bag"@en ;
-         rdfs:label "Pinuhha"@ifk .
+ito:Pinuhha rdf:type owl:Class ;
+            rdfs:subClassOf ito:HipBag ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty ito:isUsedBy ;
+                              owl:hasValue ito:Male
+                            ] ;
+            ito:altName "Butong"@ifk ,
+                        "Pinubba"@ifk ;
+            ito:longDescription "The male hip bag contains the man’s personal effects from betel chew ingredients to his amulets (hiwang/kodla). Brass coils and a stringed bottom makes this peculiarly Ifugao."@en ;
+            ito:shortDescription "Male Hip Bag"@en ;
+            rdfs:label "Pinuhha"@ifk .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Pinuhha ;
-   owl:annotatedProperty :altName ;
+   owl:annotatedSource ito:Pinuhha ;
+   owl:annotatedProperty ito:altName ;
    owl:annotatedTarget "Pinubba"@ifk ;
-   :reference "Lambrecht 1958"
+   ito:reference "Lambrecht 1958"
  ] .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Pinuhha ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Pinuhha ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "The male hip bag contains the man’s personal effects from betel chew ingredients to his amulets (hiwang/kodla). Brass coils and a stringed bottom makes this peculiarly Ifugao."@en ;
-   :reference "Martin 2018"@en
+   ito:reference "Martin 2018"@en
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#PlantDesign
-:PlantDesign rdf:type owl:Class ;
-             rdfs:subClassOf :Design ;
-             :name "Plant"@en ;
-             rdfs:comment "a Design subclass that features designs, motifs, and patterns related to plants"@en .
+ito:PlantDesign rdf:type owl:Class ;
+                rdfs:subClassOf ito:Design ;
+                ito:name "Plant"@en ;
+                rdfs:comment "a Design subclass that features designs, motifs, and patterns related to plants"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Shroud
-:Shroud rdf:type owl:Class ;
-        rdfs:subClassOf :Textile ;
-        :name "Shroud"@en ;
-        rdfs:comment "a TEXTILE TYPE SUBCLASS for different Ifugao shrouds"@en .
+ito:Shroud rdf:type owl:Class ;
+           rdfs:subClassOf ito:Textile ;
+           ito:name "Shroud"@en ;
+           rdfs:comment "a TEXTILE TYPE SUBCLASS for different Ifugao shrouds"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Skirt
-:Skirt rdf:type owl:Class ;
-       rdfs:subClassOf :Textile ;
-       :name "Skirt"@en .
+ito:Skirt rdf:type owl:Class ;
+          rdfs:subClassOf ito:Textile ;
+          ito:name "Skirt"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#SocialClass
-:SocialClass rdf:type owl:Class ;
-             rdfs:subClassOf :User ;
-             :name "Social Class"@en .
+ito:SocialClass rdf:type owl:Class ;
+                rdfs:subClassOf ito:User ;
+                ito:name "Social Class"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Stitching
-:Stitching rdf:type owl:Class ;
-           rdfs:subClassOf :SupplementaryThreading ;
-           :name "Stitching"@en ;
-           rdfs:comment "a TECHNIQUE SUBCLASS that contains types of stitches"@en .
+ito:Stitching rdf:type owl:Class ;
+              rdfs:subClassOf ito:SupplementaryThreading ;
+              ito:name "Stitching"@en ;
+              rdfs:comment "a TECHNIQUE SUBCLASS that contains types of stitches"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#StripesDesign
-:StripesDesign rdf:type owl:Class ;
-               rdfs:subClassOf :Design ;
-               :name "Stripes"@en ;
-               rdfs:comment "a Design subclass that features striped lines"@en .
+ito:StripesDesign rdf:type owl:Class ;
+                  rdfs:subClassOf ito:Design ;
+                  ito:name "Stripes"@en ;
+                  rdfs:comment "a Design subclass that features striped lines"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#StructureDesign
-:StructureDesign rdf:type owl:Class ;
-                 rdfs:subClassOf :Design ;
-                 :name "Structure"@en ;
-                 rdfs:comment "a Design subclass that features designs, motifs, and patterns related to infrastructure"@en .
+ito:StructureDesign rdf:type owl:Class ;
+                    rdfs:subClassOf ito:Design ;
+                    ito:name "Structure"@en ;
+                    rdfs:comment "a Design subclass that features designs, motifs, and patterns related to infrastructure"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#SupplementaryThreading
-:SupplementaryThreading rdf:type owl:Class ;
-                        rdfs:subClassOf :Technique ;
-                        :name "Supplementary Threading"@en .
+ito:SupplementaryThreading rdf:type owl:Class ;
+                           rdfs:subClassOf ito:Technique ;
+                           ito:name "Supplementary Threading"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Tagaktak
-:Tagaktak rdf:type owl:Class ;
-          rdfs:subClassOf :Tinonwe ;
-          :longDescription "An Ifugao loincloth. A variant of the tinonwe; usually 7-8 inches in width."@en ;
-          :name "Tagaktak"@ifk .
+ito:Tagaktak rdf:type owl:Class ;
+             rdfs:subClassOf ito:Tinonwe ;
+             ito:longDescription "An Ifugao loincloth. A variant of the tinonwe; usually 7-8 inches in width."@en ;
+             ito:name "Tagaktak"@ifk .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Tagaktak ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Tagaktak ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "An Ifugao loincloth. A variant of the tinonwe; usually 7-8 inches in width."@en ;
-   :reference "Lambrecht 1958"
+   ito:reference "Lambrecht 1958"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Technique
-:Technique rdf:type owl:Class ;
-           :name "Technique"@en ;
-           rdfs:comment "a TOP CLASS listing different weaving and design techniques"@en .
+ito:Technique rdf:type owl:Class ;
+              ito:name "Technique"@en ;
+              rdfs:comment "a TOP CLASS listing different weaving and design techniques"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Textile
-:Textile rdf:type owl:Class ;
-         :longDescription "Anything made by people from fibrous materials."@en ;
-         :name "Textile"@en ;
-         rdfs:comment "a TOP CLASS listing different classifications of textiles such as bags, belts, blankets, headdresses, loincloths, and skirt" .
+ito:Textile rdf:type owl:Class ;
+            ito:longDescription "Anything made by people from fibrous materials."@en ;
+            ito:name "Textile"@en ;
+            rdfs:comment "a TOP CLASS listing different classifications of textiles such as bags, belts, blankets, headdresses, loincloths, and skirt" .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Textile ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Textile ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "Anything made by people from fibrous materials."@en ;
-   :reference "George Washington University Museum"
+   ito:reference "George Washington University Museum"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#TextileRegion
-:TextileRegion rdf:type owl:Class ;
-               :name "Textile Region"@en ;
-               rdfs:comment "a TOP CLASS containing smaller regions, panels, and areas of textiles"@en .
+ito:TextileRegion rdf:type owl:Class ;
+                  ito:name "Textile Region"@en ;
+                  rdfs:comment "a TOP CLASS containing smaller regions, panels, and areas of textiles"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Tinannong
-:Tinannong rdf:type owl:Class ;
-           rdfs:subClassOf :Loincloth ;
-           :longDescription "An Ifugao loincloth used primarily by the poor. Usually colored white and is woven with raw cotton or bast fiber."@en ;
-           :name "Tinannong"@ifk .
+ito:Tinannong rdf:type owl:Class ;
+              rdfs:subClassOf ito:Loincloth ;
+              ito:longDescription "An Ifugao loincloth used primarily by the poor. Usually colored white and is woven with raw cotton or bast fiber."@en ;
+              ito:name "Tinannong"@ifk .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Tinannong ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Tinannong ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "An Ifugao loincloth used primarily by the poor. Usually colored white and is woven with raw cotton or bast fiber."@en ;
-   :reference "Lambrecht 1958" ,
-              "Martin 2018"
+   ito:reference "Lambrecht 1958" ,
+                 "Martin 2018"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Tinonwe
-:Tinonwe rdf:type owl:Class ;
-         rdfs:subClassOf :Loincloth ;
-         :longDescription "An Ifugao funerary loincloth for the kadangyan. It has features of the kinutian and is designed using the binobodan or ikat technique."@en ;
-         :name "Tinonwe"@ifk .
+ito:Tinonwe rdf:type owl:Class ;
+            rdfs:subClassOf ito:Loincloth ;
+            ito:longDescription "An Ifugao funerary loincloth for the kadangyan. It has features of the kinutian and is designed using the binobodan or ikat technique."@en ;
+            ito:name "Tinonwe"@ifk .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Tinonwe ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Tinonwe ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "An Ifugao funerary loincloth for the kadangyan. It has features of the kinutian and is designed using the binobodan or ikat technique."@en ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Tinum
-:Tinum rdf:type owl:Class ;
-       rdfs:subClassOf :Blanket ;
-       :longDescription "An ornamented Ifugao blanket that has narrow blue stripes alternating with yellow ones. Predominantly white."@en ;
-       :name "Tinum"@ifk .
+ito:Tinum rdf:type owl:Class ;
+          rdfs:subClassOf ito:Blanket ;
+          ito:longDescription "An ornamented Ifugao blanket that has narrow blue stripes alternating with yellow ones. Predominantly white."@en ;
+          ito:name "Tinum"@ifk .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Tinum ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Tinum ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "An ornamented Ifugao blanket that has narrow blue stripes alternating with yellow ones. Predominantly white."@en ;
-   :reference "Vanoverbergh 1929"
+   ito:reference "Vanoverbergh 1929"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Tolgue
-:Tolgue rdf:type owl:Class ;
-        rdfs:subClassOf :Loincloth ;
-        :altName "Lenchum"@ifk ,
-                 "Lendon"@ifk ;
-        :longDescription "An Ifugao loincloth worn by male corpses"@en ;
-        :name "Tolgue"@ifk .
+ito:Tolgue rdf:type owl:Class ;
+           rdfs:subClassOf ito:Loincloth ;
+           ito:altName "Lenchum"@ifk ,
+                       "Lendon"@ifk ;
+           ito:longDescription "An Ifugao loincloth worn by male corpses"@en ;
+           ito:name "Tolgue"@ifk .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Tolgue ;
-   owl:annotatedProperty :altName ;
+   owl:annotatedSource ito:Tolgue ;
+   owl:annotatedProperty ito:altName ;
    owl:annotatedTarget "Lenchum"@ifk ;
-   :reference "Celino 1990"
+   ito:reference "Celino 1990"
  ] .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Tolgue ;
-   owl:annotatedProperty :altName ;
+   owl:annotatedSource ito:Tolgue ;
+   owl:annotatedProperty ito:altName ;
    owl:annotatedTarget "Lendon"@ifk ;
-   :reference "Celino 1990"
+   ito:reference "Celino 1990"
  ] .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Tolgue ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Tolgue ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "An Ifugao loincloth worn by male corpses"@en ;
-   :reference "Celino 1990"
+   ito:reference "Celino 1990"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Uhhin
-:Uhhin rdf:type owl:Class ;
-       rdfs:subClassOf :Blanket ;
-       :longDescription "An ornamented Ifugao blanket that has red stripes. Predominantly white."@en ;
-       :name "Uhhin"@ifk .
+ito:Uhhin rdf:type owl:Class ;
+          rdfs:subClassOf ito:Blanket ;
+          ito:longDescription "An ornamented Ifugao blanket that has red stripes. Predominantly white."@en ;
+          ito:name "Uhhin"@ifk .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Uhhin ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Uhhin ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "An ornamented Ifugao blanket that has red stripes. Predominantly white."@en ;
-   :reference "Vanoverbergh 1929"
+   ito:reference "Vanoverbergh 1929"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#UpperGarment
-:UpperGarment rdf:type owl:Class ;
-              rdfs:subClassOf :Textile ;
-              :name "Upper Garment"@en .
+ito:UpperGarment rdf:type owl:Class ;
+                 rdfs:subClassOf ito:Textile ;
+                 ito:name "Upper Garment"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Usage
-:Usage rdf:type owl:Class ;
-       :name "Usage"@en ;
-       rdfs:comment "a TOP CLASS listing different events, occasions, or instances when a textile is used"@en .
+ito:Usage rdf:type owl:Class ;
+          ito:name "Usage"@en ;
+          rdfs:comment "a TOP CLASS listing different events, occasions, or instances when a textile is used"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#User
-:User rdf:type owl:Class ;
-      :name "Use"@en .
+ito:User rdf:type owl:Class ;
+         ito:name "Use"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#YarnGrouping
-:YarnGrouping rdf:type owl:Class ;
-              rdfs:subClassOf :TextileRegion ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :isARegionThatHasTechnique ;
-                                owl:hasValue :Binobodan
-                              ] ;
-              :name "Yarn Grouping"@en .
+ito:YarnGrouping rdf:type owl:Class ;
+                 rdfs:subClassOf ito:TextileRegion ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty ito:isARegionThatHasTechnique ;
+                                   owl:hasValue ito:Binobodan
+                                 ] ;
+                 ito:name "Yarn Grouping"@en .
 
 
 #################################################################
@@ -1246,705 +1247,705 @@ A red diamond design, pinnit (wild raspberry), is embroidered in the different l
 #################################################################
 
 ###  http://www.habingifugao.ph/ifutexto#Adolna
-:Adolna rdf:type owl:NamedIndividual ,
-                 :BlanketPanel ;
-        :longDescription "the middle or main panel of an Ifugao blanket"@en ;
-        :name "Adolna"@ifk .
+ito:Adolna rdf:type owl:NamedIndividual ,
+                    ito:BlanketPanel ;
+           ito:longDescription "the middle or main panel of an Ifugao blanket"@en ;
+           ito:name "Adolna"@ifk .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Adolna ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Adolna ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "the middle or main panel of an Ifugao blanket"@en ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Asipulo
-:Asipulo rdf:type owl:NamedIndividual ,
-                  :Community ;
-         :name "Asipulo" ,
-               "Asipulo"@en ;
-         rdfs:comment "a weaving community in Ifugao"@en .
+ito:Asipulo rdf:type owl:NamedIndividual ,
+                     ito:Community ;
+            ito:name "Asipulo" ,
+                     "Asipulo"@en ;
+            rdfs:comment "a weaving community in Ifugao"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Babana
-:Babana rdf:type owl:NamedIndividual ,
-                 :BlanketPanel ;
-        :longDescription "\"the teeth\" part of a pagpag section"@en ;
-        :name "Babana"@ifk .
+ito:Babana rdf:type owl:NamedIndividual ,
+                    ito:BlanketPanel ;
+           ito:longDescription "\"the teeth\" part of a pagpag section"@en ;
+           ito:name "Babana"@ifk .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Babana ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Babana ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "\"the teeth\" part of a pagpag section"@en ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#BackstrapLoom
-:BackstrapLoom rdf:type owl:NamedIndividual ,
-                        :Loom ;
-               :name "Backstrap Loom"@en ;
-               rdfs:comment "a type of loom used for weaving that is easily carried; often used in Ifugao"@en .
+ito:BackstrapLoom rdf:type owl:NamedIndividual ,
+                           ito:Loom ;
+                  ito:name "Backstrap Loom"@en ;
+                  rdfs:comment "a type of loom used for weaving that is easily carried; often used in Ifugao"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Balingbing
-:Balingbing rdf:type owl:NamedIndividual ,
-                     :BlanketPanel ;
-            :longDescription "the side panels or side pieces of an Ifugao blanket"@en ;
-            :name "Balingbing"@ifk .
+ito:Balingbing rdf:type owl:NamedIndividual ,
+                        ito:BlanketPanel ;
+               ito:longDescription "the side panels or side pieces of an Ifugao blanket"@en ;
+               ito:name "Balingbing"@ifk .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Balingbing ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Balingbing ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "the side panels or side pieces of an Ifugao blanket"@en ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Balud
-:Balud rdf:type owl:NamedIndividual ,
-                :SupplementaryThreading ;
-       :name "Balud"@ifk .
+ito:Balud rdf:type owl:NamedIndividual ,
+                   ito:SupplementaryThreading ;
+          ito:name "Balud"@ifk .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Bark
-:Bark rdf:type owl:NamedIndividual ,
-               :Fiber ;
-      :name "Bark"@en ;
-      rdfs:comment "type of fiber used in weaving"@en .
+ito:Bark rdf:type owl:NamedIndividual ,
+                  ito:Fiber ;
+         ito:name "Bark"@en ;
+         rdfs:comment "type of fiber used in weaving"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Binanniya
-:Binanniya rdf:type owl:NamedIndividual ,
-                    :AnimalDesign ;
-           :longDescription "The lizard is a kadangyan symbol for wealth and nobility. Contemporary textiles particularly those of the ikat type now commonly use the lizard motif."@en ;
-           :name "Binanniya"@ifk ;
-           :shortDescription "Lizard Design"@en .
+ito:Binanniya rdf:type owl:NamedIndividual ,
+                       ito:AnimalDesign ;
+              ito:longDescription "The lizard is a kadangyan symbol for wealth and nobility. Contemporary textiles particularly those of the ikat type now commonly use the lizard motif."@en ;
+              ito:name "Binanniya"@ifk ;
+              ito:shortDescription "Lizard Design"@en .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Binanniya ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Binanniya ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "The lizard is a kadangyan symbol for wealth and nobility. Contemporary textiles particularly those of the ikat type now commonly use the lizard motif."@en ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Binittuwon
-:Binittuwon rdf:type owl:NamedIndividual ,
-                     :CelestialDesign ;
-            :altName "Bittuon"@ifk ,
-                     "Tinallo"@ifk ;
-            :longDescription "The Star design. The binittuwon represents the children of the sun and moon in Ifugao mythology. They belong to the class of war gods, highly revered and invoked in war and sorcery rituals. The binittuwon is usually combined with the tinaggu pattern to make up the hinolme complex."@en ;
-            :name "Binittuwon"@ifk ;
-            :shortDescription "Star Design"@en .
+ito:Binittuwon rdf:type owl:NamedIndividual ,
+                        ito:CelestialDesign ;
+               ito:altName "Bittuon"@ifk ,
+                           "Tinallo"@ifk ;
+               ito:longDescription "The Star design. The binittuwon represents the children of the sun and moon in Ifugao mythology. They belong to the class of war gods, highly revered and invoked in war and sorcery rituals. The binittuwon is usually combined with the tinaggu pattern to make up the hinolme complex."@en ;
+               ito:name "Binittuwon"@ifk ;
+               ito:shortDescription "Star Design"@en .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Binittuwon ;
-   owl:annotatedProperty :altName ;
+   owl:annotatedSource ito:Binittuwon ;
+   owl:annotatedProperty ito:altName ;
    owl:annotatedTarget "Bittuon"@ifk ;
-   :reference "Vanoverbergh 1929"
+   ito:reference "Vanoverbergh 1929"
  ] .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Binittuwon ;
-   owl:annotatedProperty :altName ;
+   owl:annotatedSource ito:Binittuwon ;
+   owl:annotatedProperty ito:altName ;
    owl:annotatedTarget "Tinallo"@ifk ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Binittuwon ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Binittuwon ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "The Star design. The binittuwon represents the children of the sun and moon in Ifugao mythology. They belong to the class of war gods, highly revered and invoked in war and sorcery rituals. The binittuwon is usually combined with the tinaggu pattern to make up the hinolme complex."@en ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Binobodan
-:Binobodan rdf:type owl:NamedIndividual ,
-                    :DecorativeDyeing ;
-           :name "Binobodan"@ifk .
+ito:Binobodan rdf:type owl:NamedIndividual ,
+                       ito:DecorativeDyeing ;
+              ito:name "Binobodan"@ifk .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Black
-:Black rdf:type owl:NamedIndividual ,
-                :Color ;
-       :name "Black"@en ;
-       rdfs:comment "individuals and classes associated with the color black" .
+ito:Black rdf:type owl:NamedIndividual ,
+                   ito:Color ;
+          ito:name "Black"@en ;
+          rdfs:comment "individuals and classes associated with the color black" .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Blue
-:Blue rdf:type owl:NamedIndividual ,
-               :Color ;
-      :name "Blue"@en ;
-      rdfs:comment "individuals and classes associated with the color blue"@en .
+ito:Blue rdf:type owl:NamedIndividual ,
+                  ito:Color ;
+         ito:name "Blue"@en ;
+         rdfs:comment "individuals and classes associated with the color blue"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Brown
-:Brown rdf:type owl:NamedIndividual ,
-                :Color ;
-       :name "Brown"@en ;
-       rdfs:comment "individuals and classes associated with the color brown"@en .
+ito:Brown rdf:type owl:NamedIndividual ,
+                   ito:Color ;
+          ito:name "Brown"@en ;
+          rdfs:comment "individuals and classes associated with the color brown"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Bulalo
-:Bulalo rdf:type owl:NamedIndividual ,
-                 :YarnGrouping ;
-        :hasSubregion :Hiling ;
-        :longDescription "a group of hiling in binobodan weaving"@en ,
-                         "a unit of 12,8, or 6 threads in bobo'd weaving"@en ;
-        :name "Bulalo"@ifk .
+ito:Bulalo rdf:type owl:NamedIndividual ,
+                    ito:YarnGrouping ;
+           ito:hasSubregion ito:Hiling ;
+           ito:longDescription "a group of hiling in binobodan weaving"@en ,
+                               "a unit of 12,8, or 6 threads in bobo'd weaving"@en ;
+           ito:name "Bulalo"@ifk .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Bulalo ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Bulalo ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "a group of hiling in binobodan weaving"@en ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Bulalo ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Bulalo ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "a unit of 12,8, or 6 threads in bobo'd weaving"@en ;
-   :reference "Lambrecht 1958"
+   ito:reference "Lambrecht 1958"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Bumoykat
-:Bumoykat rdf:type owl:NamedIndividual ,
-                   :CeremonialUsage ;
-          :name "Bumoykat"@ifk ;
-          rdfs:comment "a prestigious ceremony in Ifugao, attended by Kadangyan"@en .
+ito:Bumoykat rdf:type owl:NamedIndividual ,
+                      ito:CeremonialUsage ;
+             ito:name "Bumoykat"@ifk ;
+             rdfs:comment "a prestigious ceremony in Ifugao, attended by Kadangyan"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Burial
-:Burial rdf:type owl:NamedIndividual ,
-                 :CeremonialUsage ;
-        :altName "Death"@en ,
-                 "Funeral"@en ;
-        :name "Burial"@en ;
-        rdfs:comment "a ceremony related to the death of a community member"@en .
+ito:Burial rdf:type owl:NamedIndividual ,
+                    ito:CeremonialUsage ;
+           ito:altName "Death"@en ,
+                       "Funeral"@en ;
+           ito:name "Burial"@en ;
+           rdfs:comment "a ceremony related to the death of a community member"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Commoner
-:Commoner rdf:type owl:NamedIndividual ,
-                   :SocialClass ;
-          :name "Commoner"@en .
+ito:Commoner rdf:type owl:NamedIndividual ,
+                      ito:SocialClass ;
+             ito:name "Commoner"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Cotton
-:Cotton rdf:type owl:NamedIndividual ,
-                 :Fiber ;
-        :name "Cotton"@en ;
-        rdfs:comment "type of fiber used in weaving"@en .
+ito:Cotton rdf:type owl:NamedIndividual ,
+                    ito:Fiber ;
+           ito:name "Cotton"@en ;
+           rdfs:comment "type of fiber used in weaving"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Dayude
-:Dayude rdf:type owl:NamedIndividual ,
-                 :LoinclothRegion ;
-        :name "Dayude"@ifk .
+ito:Dayude rdf:type owl:NamedIndividual ,
+                    ito:LoinclothRegion ;
+           ito:name "Dayude"@ifk .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Elderly
-:Elderly rdf:type owl:NamedIndividual ,
-                  :AgeGroup ;
-         :name "Elderly"@en .
+ito:Elderly rdf:type owl:NamedIndividual ,
+                     ito:AgeGroup ;
+            ito:name "Elderly"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Farming
-:Farming rdf:type owl:NamedIndividual ,
-                  :EverydayUsage ;
-         :name "Farming"@en ;
-         rdfs:comment "instances where a textile is used in farming"@en .
+ito:Farming rdf:type owl:NamedIndividual ,
+                     ito:EverydayUsage ;
+            ito:name "Farming"@en ;
+            rdfs:comment "instances where a textile is used in farming"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Female
-:Female rdf:type owl:NamedIndividual ,
-                 :Gender ;
-        :name "Female"@en .
+ito:Female rdf:type owl:NamedIndividual ,
+                    ito:Gender ;
+           ito:name "Female"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Ginlot
-:Ginlot rdf:type owl:NamedIndividual ,
-                 :HumanDesign ;
-        :longDescription "Perhaps the most powerful symbol as far as the Ifugao warrior is concerned, the ginlot or the beheaded, stands for the Great Deceiver, Manâha-ut and his progeny.  The gammit and inladang bear this symbol of the Great Deceiver."@en ;
-        :name "Ginlot"@ifk ;
-        :shortDescription "The Beheaded Design"@en .
+ito:Ginlot rdf:type owl:NamedIndividual ,
+                    ito:HumanDesign ;
+           ito:longDescription "Perhaps the most powerful symbol as far as the Ifugao warrior is concerned, the ginlot or the beheaded, stands for the Great Deceiver, Manâha-ut and his progeny.  The gammit and inladang bear this symbol of the Great Deceiver."@en ;
+           ito:name "Ginlot"@ifk ;
+           ito:shortDescription "The Beheaded Design"@en .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Ginlot ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Ginlot ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "Perhaps the most powerful symbol as far as the Ifugao warrior is concerned, the ginlot or the beheaded, stands for the Great Deceiver, Manâha-ut and his progeny.  The gammit and inladang bear this symbol of the Great Deceiver."@en ;
-   :reference "Lambrecht 1958"
+   ito:reference "Lambrecht 1958"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Green
-:Green rdf:type owl:NamedIndividual ,
-                :Color ;
-       :name "Green"@en ;
-       rdfs:comment "individuals and classes associated with the color green"@en .
+ito:Green rdf:type owl:NamedIndividual ,
+                   ito:Color ;
+          ito:name "Green"@en ;
+          rdfs:comment "individuals and classes associated with the color green"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#HambuludStitch
-:HambuludStitch rdf:type owl:NamedIndividual ,
-                         :Stitching ;
-                :longDescription "A stitch commonly found in intinlu skirts; features the hambulud pattern"@en ;
-                :name "Hambulud Stitch"@en .
+ito:HambuludStitch rdf:type owl:NamedIndividual ,
+                            ito:Stitching ;
+                   ito:longDescription "A stitch commonly found in intinlu skirts; features the hambulud pattern"@en ;
+                   ito:name "Hambulud Stitch"@en .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :HambuludStitch ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:HambuludStitch ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "A stitch commonly found in intinlu skirts; features the hambulud pattern"@en ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Hiling
-:Hiling rdf:type owl:NamedIndividual ,
-                 :YarnGrouping ;
-        :longDescription "a group of strands of yarn in binobodan weaving"@en ;
-        :name "Hiling"@ifk .
+ito:Hiling rdf:type owl:NamedIndividual ,
+                    ito:YarnGrouping ;
+           ito:longDescription "a group of strands of yarn in binobodan weaving"@en ;
+           ito:name "Hiling"@ifk .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Hiling ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Hiling ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "a group of strands of yarn in binobodan weaving"@en ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Hinakhaklung
-:Hinakhaklung rdf:type owl:NamedIndividual ,
-                       :CelestialDesign ;
-              :altName "Hinakhaklong"@en ;
-              :longDescription "The Dipper design pertains to the bright stars of the constellation Ursa Major. This design is often seen in inladang blankets and gamit skirts."@en ;
-              :name "Hinakhaklung"@ifk ;
-              :shortDescription "Dipper Design"@en .
+ito:Hinakhaklung rdf:type owl:NamedIndividual ,
+                          ito:CelestialDesign ;
+                 ito:altName "Hinakhaklong"@en ;
+                 ito:longDescription "The Dipper design pertains to the bright stars of the constellation Ursa Major. This design is often seen in inladang blankets and gamit skirts."@en ;
+                 ito:name "Hinakhaklung"@ifk ;
+                 ito:shortDescription "Dipper Design"@en .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Hinakhaklung ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Hinakhaklung ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "The Dipper design pertains to the bright stars of the constellation Ursa Major. This design is often seen in inladang blankets and gamit skirts."@en ;
-   :reference "Lambrecht 1958" ,
-              "Martin 2018"
+   ito:reference "Lambrecht 1958" ,
+                 "Martin 2018"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Hinappiyo
-:Hinappiyo rdf:type owl:NamedIndividual ,
-                    :DeityDesign ,
-                    :ObjectDesign ;
-           :longDescription "The shield pattern represents the Maknongan or Inumban, a class of protector deities of the highest order in the ancient pantheon."@en ;
-           :name "Hinappiyo"@ifk ;
-           :shortDescription "Inumban Design"@en ,
-                             "Maknongan Design"@en ,
-                             "Shield Pattern"@en .
+ito:Hinappiyo rdf:type owl:NamedIndividual ,
+                       ito:DeityDesign ,
+                       ito:ObjectDesign ;
+              ito:longDescription "The shield pattern represents the Maknongan or Inumban, a class of protector deities of the highest order in the ancient pantheon."@en ;
+              ito:name "Hinappiyo"@ifk ;
+              ito:shortDescription "Inumban Design"@en ,
+                                   "Maknongan Design"@en ,
+                                   "Shield Pattern"@en .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Hinappiyo ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Hinappiyo ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "The shield pattern represents the Maknongan or Inumban, a class of protector deities of the highest order in the ancient pantheon."@en ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Hinappiyo ;
-   owl:annotatedProperty :shortDescription ;
+   owl:annotatedSource ito:Hinappiyo ;
+   owl:annotatedProperty ito:shortDescription ;
    owl:annotatedTarget "Inumban Design"@en ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Hinappiyo ;
-   owl:annotatedProperty :shortDescription ;
+   owl:annotatedSource ito:Hinappiyo ;
+   owl:annotatedProperty ito:shortDescription ;
    owl:annotatedTarget "Maknongan Design"@en ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Hingyon
-:Hingyon rdf:type owl:NamedIndividual ,
-                  :Community ;
-         :name "Hingyon" ;
-         rdfs:comment "a weaving community in Ifugao"@en .
+ito:Hingyon rdf:type owl:NamedIndividual ,
+                     ito:Community ;
+            ito:name "Hingyon" ;
+            rdfs:comment "a weaving community in Ifugao"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Hinikkitan
-:Hinikkitan rdf:type owl:NamedIndividual ,
-                     :ObjectDesign ;
-            :altName "Hiniki'tan"@ifk ;
-            :longDescription "The shuttle symbol is apparently a symbol of the weaver gods. During the process of weaving, the shuttle, hikitan, fills in the warp with the weft thread to complete the fabric. It is often stitched on loincloths and woven in blankets."@en ;
-            :name "Hinikkitan"@ifk ;
-            :shortDescription "Shuttle Design"@en .
+ito:Hinikkitan rdf:type owl:NamedIndividual ,
+                        ito:ObjectDesign ;
+               ito:altName "Hiniki'tan"@ifk ;
+               ito:longDescription "The shuttle symbol is apparently a symbol of the weaver gods. During the process of weaving, the shuttle, hikitan, fills in the warp with the weft thread to complete the fabric. It is often stitched on loincloths and woven in blankets."@en ;
+               ito:name "Hinikkitan"@ifk ;
+               ito:shortDescription "Shuttle Design"@en .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Hinikkitan ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Hinikkitan ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "The shuttle symbol is apparently a symbol of the weaver gods. During the process of weaving, the shuttle, hikitan, fills in the warp with the weft thread to complete the fabric. It is often stitched on loincloths and woven in blankets."@en ;
-   :reference "Lambrecht 1958" ,
-              "Martin 2018"
+   ito:reference "Lambrecht 1958" ,
+                 "Martin 2018"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Hinolgat
-:Hinolgat rdf:type owl:NamedIndividual ,
-                   :ObjectDesign ;
-          :altName "Hinolholgat"@ifk ;
-          :longDescription "The spear head design represents the gods of war. This pattern is very visible in men’s clothing including the baya’ung blankets and the loincloths. It is also a standard pattern for most traditional textiles considering the wide sphere of influence of the war gods. The gods of war are also the gods of justice and are also often invoked in agricultural rites. The hinolgat can be seen in prestige blankets, funerary garbs and skirts."@en ;
-          :name "Hinolgat"@ifk ;
-          :shortDescription "Spearhead Design"@en .
+ito:Hinolgat rdf:type owl:NamedIndividual ,
+                      ito:ObjectDesign ;
+             ito:altName "Hinolholgat"@ifk ;
+             ito:longDescription "The spear head design represents the gods of war. This pattern is very visible in men’s clothing including the baya’ung blankets and the loincloths. It is also a standard pattern for most traditional textiles considering the wide sphere of influence of the war gods. The gods of war are also the gods of justice and are also often invoked in agricultural rites. The hinolgat can be seen in prestige blankets, funerary garbs and skirts."@en ;
+             ito:name "Hinolgat"@ifk ;
+             ito:shortDescription "Spearhead Design"@en .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Hinolgat ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Hinolgat ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "The spear head design represents the gods of war. This pattern is very visible in men’s clothing including the baya’ung blankets and the loincloths. It is also a standard pattern for most traditional textiles considering the wide sphere of influence of the war gods. The gods of war are also the gods of justice and are also often invoked in agricultural rites. The hinolgat can be seen in prestige blankets, funerary garbs and skirts."@en ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Hinulgi
-:Hinulgi rdf:type owl:NamedIndividual ,
-                  :HumanDesign ;
-         :longDescription "The complex diamond pattern found in gamong blankets and sometimes in the baya’ung. Like the simple diamond kinattibanglan, the hinulgi stands as a symbol for the ancestors."@en ;
-         :name "Hinulgi"@ifk ;
-         :shortDescription "Complex Diamond Pattern"@en .
+ito:Hinulgi rdf:type owl:NamedIndividual ,
+                     ito:HumanDesign ;
+            ito:longDescription "The complex diamond pattern found in gamong blankets and sometimes in the baya’ung. Like the simple diamond kinattibanglan, the hinulgi stands as a symbol for the ancestors."@en ;
+            ito:name "Hinulgi"@ifk ;
+            ito:shortDescription "Complex Diamond Pattern"@en .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Hinulgi ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Hinulgi ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "The complex diamond pattern found in gamong blankets and sometimes in the baya’ung. Like the simple diamond kinattibanglan, the hinulgi stands as a symbol for the ancestors."@en ;
-   :reference "Lambrecht 1958"
+   ito:reference "Lambrecht 1958"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Hungduan
-:Hungduan rdf:type owl:NamedIndividual ,
-                   :Community ;
-          :name "Hungduan" ;
-          rdfs:comment "a weaving community in Ifugao"@en .
+ito:Hungduan rdf:type owl:NamedIndividual ,
+                      ito:Community ;
+             ito:name "Hungduan" ;
+             rdfs:comment "a weaving community in Ifugao"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Inambayung
-:Inambayung rdf:type owl:NamedIndividual ,
-                     :DeityDesign ,
-                     :ObjectDesign ;
-            :altName "Inam-ambayung"@ifk ,
-                     "Inambayong"@ifk ,
-                     "Inammbayung"@ifk ;
-            :longDescription "The inambayung (or inam-ambayung if woven in mutliple) represents the Halupe or convincer gods. It was customary for the Ifugao to always have his hip bag (ambayung) with him. It is triangular in shape... and is a pattern used in the gammit and inlahdang."@en ;
-            :name "Inambayung"@ifk ;
-            :shortDescription "Halupe/Convincer Gods"@en ,
-                              "Hip Bag Design"@en .
+ito:Inambayung rdf:type owl:NamedIndividual ,
+                        ito:DeityDesign ,
+                        ito:ObjectDesign ;
+               ito:altName "Inam-ambayung"@ifk ,
+                           "Inambayong"@ifk ,
+                           "Inammbayung"@ifk ;
+               ito:longDescription "The inambayung (or inam-ambayung if woven in mutliple) represents the Halupe or convincer gods. It was customary for the Ifugao to always have his hip bag (ambayung) with him. It is triangular in shape... and is a pattern used in the gammit and inlahdang."@en ;
+               ito:name "Inambayung"@ifk ;
+               ito:shortDescription "Halupe/Convincer Gods"@en ,
+                                    "Hip Bag Design"@en .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Inambayung ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Inambayung ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "The inambayung (or inam-ambayung if woven in mutliple) represents the Halupe or convincer gods. It was customary for the Ifugao to always have his hip bag (ambayung) with him. It is triangular in shape... and is a pattern used in the gammit and inlahdang."@en ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Iniddo
-:Iniddo rdf:type owl:NamedIndividual ,
-                 :AnimalDesign ;
-        :longDescription "The Python design. The Iniddo is seen in baya'ong and ga'mong blankets, and in gami't skirts and inla'dang blankets"@en ;
-        :name "Iniddo"@ifk ;
-        :shortDescription "Python Design"@en .
+ito:Iniddo rdf:type owl:NamedIndividual ,
+                    ito:AnimalDesign ;
+           ito:longDescription "The Python design. The Iniddo is seen in baya'ong and ga'mong blankets, and in gami't skirts and inla'dang blankets"@en ;
+           ito:name "Iniddo"@ifk ;
+           ito:shortDescription "Python Design"@en .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Iniddo ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Iniddo ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "The Python design. The Iniddo is seen in baya'ong and ga'mong blankets, and in gami't skirts and inla'dang blankets"@en ;
-   :reference "Lambrecht 1958"
+   ito:reference "Lambrecht 1958"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Inullog
-:Inullog rdf:type owl:NamedIndividual ,
-                  :AnimalDesign ;
-         :altName "Inululog"@ifk ;
-         :longDescription "The inullog (from the root word ulog meaning snake) refers to the same character in the [Buluh-han] myths though with different ritual contexts."@en ;
-         :name "Inullog"@ifk ;
-         :shortDescription "Serpent Design"@en .
+ito:Inullog rdf:type owl:NamedIndividual ,
+                     ito:AnimalDesign ;
+            ito:altName "Inululog"@ifk ;
+            ito:longDescription "The inullog (from the root word ulog meaning snake) refers to the same character in the [Buluh-han] myths though with different ritual contexts."@en ;
+            ito:name "Inullog"@ifk ;
+            ito:shortDescription "Serpent Design"@en .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Inullog ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Inullog ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "The inullog (from the root word ulog meaning snake) refers to the same character in the [Buluh-han] myths though with different ritual contexts."@en ;
-   :reference "Maritn 2018"
+   ito:reference "Maritn 2018"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Iwitan
-:Iwitan rdf:type owl:NamedIndividual ,
-                 :LoinclothRegion ;
-        :name "Iwitan"@ifk .
+ito:Iwitan rdf:type owl:NamedIndividual ,
+                    ito:LoinclothRegion ;
+           ito:name "Iwitan"@ifk .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Kambulo
-:Kambulo rdf:type owl:NamedIndividual ,
-                  :Community ;
-         :name "Kambulo" ;
-         rdfs:comment "a weaving community in Ifugao"@en .
+ito:Kambulo rdf:type owl:NamedIndividual ,
+                     ito:Community ;
+            ito:name "Kambulo" ;
+            rdfs:comment "a weaving community in Ifugao"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Kiangan
-:Kiangan rdf:type owl:NamedIndividual ,
-                  :Community ;
-         :name "Kiangan" ;
-         rdfs:comment "a weaving community in Ifugao"@en .
+ito:Kiangan rdf:type owl:NamedIndividual ,
+                     ito:Community ;
+            ito:name "Kiangan" ;
+            rdfs:comment "a weaving community in Ifugao"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Kinattibanglan
-:Kinattibanglan rdf:type owl:NamedIndividual ,
-                         :PlantDesign ;
-                :altName "Kinatibanglan"@ifk ;
-                :longDescription "One of the Diamond Patterns. The kinattibanglan represents the, aammod dih do’ne, ancestors and their time. This is mainly used in skirts and blankets. The woven kinattibanglan (fern-like) is based on the diamond-looking patterns found on the trunk of the giant fern wood."@en ;
-                :name "Kinattibanglan"@ifk ;
-                :shortDescription "Fern Design"@en .
+ito:Kinattibanglan rdf:type owl:NamedIndividual ,
+                            ito:PlantDesign ;
+                   ito:altName "Kinatibanglan"@ifk ;
+                   ito:longDescription "One of the Diamond Patterns. The kinattibanglan represents the, aammod dih do’ne, ancestors and their time. This is mainly used in skirts and blankets. The woven kinattibanglan (fern-like) is based on the diamond-looking patterns found on the trunk of the giant fern wood."@en ;
+                   ito:name "Kinattibanglan"@ifk ;
+                   ito:shortDescription "Fern Design"@en .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Kinattibanglan ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Kinattibanglan ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "One of the Diamond Patterns. The kinattibanglan represents the, aammod dih do’ne, ancestors and their time. This is mainly used in skirts and blankets. The woven kinattibanglan (fern-like) is based on the diamond-looking patterns found on the trunk of the giant fern wood."@en ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Kinulhudan
-:Kinulhudan rdf:type owl:NamedIndividual ,
-                     :DecorativeWeaving ;
-            :longDescription "A type of plain weave technique that features plain stripes." ;
-            :name "Kinulhudan"@ifk .
+ito:Kinulhudan rdf:type owl:NamedIndividual ,
+                        ito:DecorativeWeaving ;
+               ito:longDescription "A type of plain weave technique that features plain stripes." ;
+               ito:name "Kinulhudan"@ifk .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Kinulhudan ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Kinulhudan ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "A type of plain weave technique that features plain stripes." ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#KutilapStitch
-:KutilapStitch rdf:type owl:NamedIndividual ,
-                        :Stitching ;
-               :longDescription "A stitch commonly found in intinlu skirts; features the kutilap pattern"@en ;
-               :name "Kutilap Stitch"@en .
+ito:KutilapStitch rdf:type owl:NamedIndividual ,
+                           ito:Stitching ;
+                  ito:longDescription "A stitch commonly found in intinlu skirts; features the kutilap pattern"@en ;
+                  ito:name "Kutilap Stitch"@en .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :KutilapStitch ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:KutilapStitch ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "A stitch commonly found in intinlu skirts; features the kutilap pattern"@en ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Lagawe
-:Lagawe rdf:type owl:NamedIndividual ,
-                 :Community ;
-        :name "Lagawe" ;
-        rdfs:comment "a weaving community in Ifugao"@en .
+ito:Lagawe rdf:type owl:NamedIndividual ,
+                    ito:Community ;
+           ito:name "Lagawe" ;
+           rdfs:comment "a weaving community in Ifugao"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Linuhhung
-:Linuhhung rdf:type owl:NamedIndividual ,
-                    :ObjectDesign ;
-           :longDescription "The mortar design represents the agricultural gods, superior deities of the Ifugao religion. These gods are responsible for good harvests but require sacrifices and offerings from the Ifugao."@en ;
-           :name "Linuhhung"@ifk ;
-           :shortDescription "Mortar Design"@en .
+ito:Linuhhung rdf:type owl:NamedIndividual ,
+                       ito:ObjectDesign ;
+              ito:longDescription "The mortar design represents the agricultural gods, superior deities of the Ifugao religion. These gods are responsible for good harvests but require sacrifices and offerings from the Ifugao."@en ;
+              ito:name "Linuhhung"@ifk ;
+              ito:shortDescription "Mortar Design"@en .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Linuhhung ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Linuhhung ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "The mortar design represents the agricultural gods, superior deities of the Ifugao religion. These gods are responsible for good harvests but require sacrifices and offerings from the Ifugao."@en ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Male
-:Male rdf:type owl:NamedIndividual ,
-               :Gender ;
-      :name "Male"@en .
+ito:Male rdf:type owl:NamedIndividual ,
+                  ito:Gender ;
+         ito:name "Male"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Mayoyao
-:Mayoyao rdf:type owl:NamedIndividual ,
-                  :Community ;
-         :altName "Mayawyaw" ;
-         :name "Mayoyao" ;
-         rdfs:comment "a weaving community in Ifugao"@en .
+ito:Mayoyao rdf:type owl:NamedIndividual ,
+                     ito:Community ;
+            ito:altName "Mayawyaw" ;
+            ito:name "Mayoyao" ;
+            rdfs:comment "a weaving community in Ifugao"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Ngume
-:Ngume rdf:type owl:NamedIndividual ,
-                :LoinclothRegion ;
-       :name "Ngume"@ifk .
+ito:Ngume rdf:type owl:NamedIndividual ,
+                   ito:LoinclothRegion ;
+          ito:name "Ngume"@ifk .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Nilihha
-:Nilihha rdf:type owl:NamedIndividual ,
-                  :SupplementaryThreading ;
-         :name "Nilihha"@ifk .
+ito:Nilihha rdf:type owl:NamedIndividual ,
+                     ito:SupplementaryThreading ;
+            ito:name "Nilihha"@ifk .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Nobility
-:Nobility rdf:type owl:NamedIndividual ,
-                   :SocialClass ;
-          :name "Nobility"@en .
+ito:Nobility rdf:type owl:NamedIndividual ,
+                      ito:SocialClass ;
+             ito:name "Nobility"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#OrdinaryUse
-:OrdinaryUse rdf:type owl:NamedIndividual ,
-                      :EverydayUsage ;
-             :name "Ordinary Use"@en ;
-             rdfs:comment "generic and ordinary usage of textiles (e.g, in everyday life)"@en .
+ito:OrdinaryUse rdf:type owl:NamedIndividual ,
+                         ito:EverydayUsage ;
+                ito:name "Ordinary Use"@en ;
+                rdfs:comment "generic and ordinary usage of textiles (e.g, in everyday life)"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#PedalLoom
-:PedalLoom rdf:type owl:NamedIndividual ,
-                    :Loom ;
-           :name "Pedal Loom"@en ;
-           rdfs:comment "a type of loom used for weaving that is characterized as large and not easily movable"@en .
+ito:PedalLoom rdf:type owl:NamedIndividual ,
+                       ito:Loom ;
+              ito:name "Pedal Loom"@en ;
+              rdfs:comment "a type of loom used for weaving that is characterized as large and not easily movable"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Red
-:Red rdf:type owl:NamedIndividual ,
-              :Color ;
-     :name "Red"@en ;
-     rdfs:comment "individuals and classes associated with the color red"@en .
+ito:Red rdf:type owl:NamedIndividual ,
+                 ito:Color ;
+        ito:name "Red"@en ;
+        rdfs:comment "individuals and classes associated with the color red"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#TakdogStitch
-:TakdogStitch rdf:type owl:NamedIndividual ,
-                       :Stitching ;
-              :longDescription "A stitch commonly found in intinlu skirts; features the takdog pattern"@en ;
-              :name "Takdog Stitch"@en .
+ito:TakdogStitch rdf:type owl:NamedIndividual ,
+                          ito:Stitching ;
+                 ito:longDescription "A stitch commonly found in intinlu skirts; features the takdog pattern"@en ;
+                 ito:name "Takdog Stitch"@en .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :TakdogStitch ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:TakdogStitch ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "A stitch commonly found in intinlu skirts; features the takdog pattern"@en ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Talakid
-:Talakid rdf:type owl:NamedIndividual ,
-                  :YarnGrouping ;
-         :hasSubregion :Bulalo ;
-         :longDescription "a group of bulalo in binobodan weaving"@en ;
-         :name "Talakid"@ifk .
+ito:Talakid rdf:type owl:NamedIndividual ,
+                     ito:YarnGrouping ;
+            ito:hasSubregion ito:Bulalo ;
+            ito:longDescription "a group of bulalo in binobodan weaving"@en ;
+            ito:name "Talakid"@ifk .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Talakid ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Talakid ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "a group of bulalo in binobodan weaving"@en ;
    rdfs:comment "Martin 2018"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Talungtung
-:Talungtung rdf:type owl:NamedIndividual ,
-                     :BlanketPanel ;
-            :longDescription "A narrow strip of cloth woven separately from the blanket panel used as a border on both ends of the length of the woven fabric"@en ;
-            :name "Talungtung"@ifk .
+ito:Talungtung rdf:type owl:NamedIndividual ,
+                        ito:BlanketPanel ;
+               ito:longDescription "A narrow strip of cloth woven separately from the blanket panel used as a border on both ends of the length of the woven fabric"@en ;
+               ito:name "Talungtung"@ifk .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Talungtung ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Talungtung ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "A narrow strip of cloth woven separately from the blanket panel used as a border on both ends of the length of the woven fabric"@en ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Tinaggu
-:Tinaggu rdf:type owl:NamedIndividual ,
-                  :HumanDesign ;
-         :altName "tatagu"@ifk ,
-                  "tinatagu"@ifk ;
-         :longDescription "The Human design. Symbolizing the deified ancestors of the Ifugao, the tinaggu pattern evokes protection from ancestral superhumans, who, by their virtue and great deeds during their life on Pugaw or the Earthworld, have been elevated to the status of demi-gods."@en ;
-         :name "Tinaggu"@ifk ;
-         :shortDescription "Human Design"@en .
+ito:Tinaggu rdf:type owl:NamedIndividual ,
+                     ito:HumanDesign ;
+            ito:altName "tatagu"@ifk ,
+                        "tinatagu"@ifk ;
+            ito:longDescription "The Human design. Symbolizing the deified ancestors of the Ifugao, the tinaggu pattern evokes protection from ancestral superhumans, who, by their virtue and great deeds during their life on Pugaw or the Earthworld, have been elevated to the status of demi-gods."@en ;
+            ito:name "Tinaggu"@ifk ;
+            ito:shortDescription "Human Design"@en .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Tinaggu ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Tinaggu ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "The Human design. Symbolizing the deified ancestors of the Ifugao, the tinaggu pattern evokes protection from ancestral superhumans, who, by their virtue and great deeds during their life on Pugaw or the Earthworld, have been elevated to the status of demi-gods."@en ;
-   :reference "Lambrecht 1958"
+   ito:reference "Lambrecht 1958"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Tiniktiku
-:Tiniktiku rdf:type owl:NamedIndividual ,
-                    :CelestialDesign ;
-           :altName "Tiktiku"@ifk ;
-           :longDescription "The Lightning Bolt design. The representation of the Munkontad (Makalun) or messenger deities. Present in the gammit skirt, the kinutiyyan, inlahdang, and tinonwe."@en ;
-           :name "Tiniktiku"@ifk ;
-           :shortDescription "Lightning Bolt Design"@en .
+ito:Tiniktiku rdf:type owl:NamedIndividual ,
+                       ito:CelestialDesign ;
+              ito:altName "Tiktiku"@ifk ;
+              ito:longDescription "The Lightning Bolt design. The representation of the Munkontad (Makalun) or messenger deities. Present in the gammit skirt, the kinutiyyan, inlahdang, and tinonwe."@en ;
+              ito:name "Tiniktiku"@ifk ;
+              ito:shortDescription "Lightning Bolt Design"@en .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Tiniktiku ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Tiniktiku ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "The Lightning Bolt design. The representation of the Munkontad (Makalun) or messenger deities. Present in the gammit skirt, the kinutiyyan, inlahdang, and tinonwe."@en ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Uluna
-:Uluna rdf:type owl:NamedIndividual ,
-                :BlanketPanel ;
-       :longDescription "\"the head\" part of a pagpag section"@en ;
-       :name "Uluna"@ifk .
+ito:Uluna rdf:type owl:NamedIndividual ,
+                   ito:BlanketPanel ;
+          ito:longDescription "\"the head\" part of a pagpag section"@en ;
+          ito:name "Uluna"@ifk .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource :Uluna ;
-   owl:annotatedProperty :longDescription ;
+   owl:annotatedSource ito:Uluna ;
+   owl:annotatedProperty ito:longDescription ;
    owl:annotatedTarget "\"the head\" part of a pagpag section"@en ;
-   :reference "Martin 2018"
+   ito:reference "Martin 2018"
  ] .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Uyauy
-:Uyauy rdf:type owl:NamedIndividual ,
-                :CeremonialUsage ;
-       :name "Uyauy"@ifk ;
-       rdfs:comment "a prestigious ceremony in Ifugao, attended by Kadangyan"@en .
+ito:Uyauy rdf:type owl:NamedIndividual ,
+                   ito:CeremonialUsage ;
+          ito:name "Uyauy"@ifk ;
+          rdfs:comment "a prestigious ceremony in Ifugao, attended by Kadangyan"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Wedding
-:Wedding rdf:type owl:NamedIndividual ,
-                  :CeremonialUsage ;
-         :name "Wedding"@en ;
-         rdfs:comment "a ceremony related to the marriage of two members of the community"@en .
+ito:Wedding rdf:type owl:NamedIndividual ,
+                     ito:CeremonialUsage ;
+            ito:name "Wedding"@en ;
+            rdfs:comment "a ceremony related to the marriage of two members of the community"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#White
-:White rdf:type owl:NamedIndividual ,
-                :Color ;
-       :name "White"@en ;
-       rdfs:comment "individuals and classes associated with the color white"@en .
+ito:White rdf:type owl:NamedIndividual ,
+                   ito:Color ;
+          ito:name "White"@en ;
+          rdfs:comment "individuals and classes associated with the color white"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Wool
-:Wool rdf:type owl:NamedIndividual ,
-               :Fiber ;
-      :name "Wool"@en ;
-      rdfs:comment "type of fiber used in weaving"@en .
+ito:Wool rdf:type owl:NamedIndividual ,
+                  ito:Fiber ;
+         ito:name "Wool"@en ;
+         rdfs:comment "type of fiber used in weaving"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Yellow
-:Yellow rdf:type owl:NamedIndividual ,
-                 :Color ;
-        :name "Yellow"@en ;
-        rdfs:comment "individuals and classes associated with the color yellow"@en .
+ito:Yellow rdf:type owl:NamedIndividual ,
+                    ito:Color ;
+           ito:name "Yellow"@en ;
+           rdfs:comment "individuals and classes associated with the color yellow"@en .
 
 
 ###  http://www.habingifugao.ph/ifutexto#Young
-:Young rdf:type owl:NamedIndividual ,
-                :AgeGroup ;
-       :name "Young"@en .
+ito:Young rdf:type owl:NamedIndividual ,
+                   ito:AgeGroup ;
+          ito:name "Young"@en .
 
 
 #################################################################
@@ -1952,69 +1953,69 @@ A red diamond design, pinnit (wild raspberry), is embroidered in the different l
 #################################################################
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :Ambayung
-                :Libutan
-                :Pinuhha
+  owl:members ( ito:Ambayung
+                ito:Libutan
+                ito:Pinuhha
               )
 ] .
 
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :Bayyaung
-                :Gamong
-                :Hape
-                :Hayda
-                :Inlahdang
-                :Kintog
-                :Kinutiyyan
-                :Llabhu
-                :Pinagpagan
-                :Pinogpogan
-                :Tinum
-                :Uhhin
+  owl:members ( ito:Bayyaung
+                ito:Gamong
+                ito:Hape
+                ito:Hayda
+                ito:Inlahdang
+                ito:Kintog
+                ito:Kinutiyyan
+                ito:Llabhu
+                ito:Pinagpagan
+                ito:Pinogpogan
+                ito:Tinum
+                ito:Uhhin
               )
 ] .
 
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :Binuhlan
-                :Gimpong
-                :Mayad
-                :Piniwa
-                :Tinannong
-                :Tinonwe
-                :Tolgue
+  owl:members ( ito:Binuhlan
+                ito:Gimpong
+                ito:Mayad
+                ito:Piniwa
+                ito:Tinannong
+                ito:Tinonwe
+                ito:Tolgue
               )
 ] .
 
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :BlanketPanel
-                :LoinclothRegion
-                :YarnGrouping
+  owl:members ( ito:BlanketPanel
+                ito:LoinclothRegion
+                ito:YarnGrouping
               )
 ] .
 
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :Color
-                :Community
-                :Design
-                :Loom
-                :Material
-                :Technique
-                :Textile
-                :TextileRegion
-                :Usage
-                :User
+  owl:members ( ito:Color
+                ito:Community
+                ito:Design
+                ito:Loom
+                ito:Material
+                ito:Technique
+                ito:Textile
+                ito:TextileRegion
+                ito:Usage
+                ito:User
               )
 ] .
 
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :DecorativeDyeing
-                :DecorativeWeaving
-                :SupplementaryThreading
+  owl:members ( ito:DecorativeDyeing
+                ito:DecorativeWeaving
+                ito:SupplementaryThreading
               )
 ] .
 
